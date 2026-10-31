@@ -1,0 +1,49 @@
+\title{Justification of the name of global elements}
+\taxon{Proposition}
+\author{hsuchingchung}
+\import{macros-subobj}
+\date{2026-10-30T14:02:49Z}
+
+\p{Fix an object #{A} in a category \CCat with a [terminal object](0005) #{1}.}
+
+\p{An assignment #{(a_\Gamma)_\Gamma} of a [generalized element](0002) #{a_\Gamma : \Gamma \r A} of #{A} for each object #{\Gamma} in \CCat is called a \strong{global assignment of generalized elements of #{A}} if it is \em{invariant under context substitution} in the sense that:
+
+##{a_\Delta \sigma = a_\Gamma}
+
+for all morphisms #{\sigma : \Gamma \r \Delta} in \CCat.}
+
+
+\p{Show that there is a one-to-one correspondence between the collection of global elements of #{A} and the collection of global assignments of generalized elements of #{A}.
+}
+
+\subtree{
+\taxon{Proof}
+
+\p{
+
+Given a global element #{c : 1 \r A} of #{A}, we can consider the assignment of generalized elements of #{A}:
+
+##{c \bang_\Gamma : \Gamma \r 1 \r A}
+
+for each object #{\Gamma}, where the morphism #{\bang_\Gamma : \Gamma \r 1} is the unique morphism into the [terminal object](0005) #{1}. Then #{(c \bang_\Gamma)_\Gamma} is invariant under context substitution since for any morphism #{\sigma: \Gamma \r \Delta}, we have #{\bang_\Gamma = \bang_\Delta \sigma} by the uniqueness of #{\bang_\Gamma}, and so #{c \bang_\Gamma = c \bang_\Delta \sigma}. 
+}
+
+\p{
+Conversely, let #{(a_\Gamma)_\Gamma} be a global assignment of generalized elements of #{A}. We have a global element 
+
+##{ a_1 : 1 \r A}
+
+of #{A}.}
+
+\p{
+We check that these two constructions are inverses of each other:
+
+\ul{
+  \li{#{c \bang_1 = c}: Since #{\bang_1 = \id_1 : 1 \r 1} by the uniqueness of #{\bang_1}, we have #{c \bang_1 = c \id_1 = c}.}
+
+  \li{#{a_1 \bang_\Gamma = a_\Gamma}: Since #{(a_\Gamma)_\Gamma} is "invariant under context substitution", taking #{\sigma := \bang_\Gamma : \Gamma \r 1} gives #{a_1 \bang_\Gamma = a_\Gamma}.}
+}
+
+#{\qed}
+
+}}

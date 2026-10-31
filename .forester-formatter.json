@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "lastScan": "2026-10-31T03:01:37.743Z",
+  "macros": [
+    "CCat",
+    "bang",
+    "id",
+    "qed",
+    "r"
+  ],
+  "subtreeMacros": []
+}

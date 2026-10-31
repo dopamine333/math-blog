@@ -1,0 +1,9 @@
+\title{Macros for the project: [Subobject Object](0001)}
+
+\def\CCat{#{\mathcal{C}}}
+\def\r{#{\rightarrow}}
+
+\def\id{#{\operatorname{id}}}
+\def\bang{#{{!}}}
+\def\qed{#{\blacksquare}}
+\def\hook{#{\hookrightarrow}}

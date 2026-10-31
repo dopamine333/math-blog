@@ -1,0 +1,8 @@
+\date{2026-10-31T05:26:11Z}
+\title{Subobject equivalence relation}
+\taxon{Definition}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{
+Two [monomorphisms](0006) #{u, v} into the same object #{A} in a category \CCat are considered \strong{equivalent} if ##{u \le v \text{ and } v \le u,} denoted by #{u \sim v}. Recall that #{u \le v} denotes the [subobject inclusion relation](0008).}

@@ -1,0 +1,22 @@
+\title{An gentle introduction to subobject classifier}
+\author{hsuchingchung}
+\date{2026-10-30T12:35:38Z}
+\import{macros-subobj}
+
+\transclude{0002}
+
+\p{In the following, we use #{f g} to denote the composition #{f ∘ g} of morphisms.}
+
+\transclude{0003}
+
+\transclude{0004}
+
+\transclude{0007}
+% product object in len of generalized object
+
+% transclude in kodama is not as smooth as forester
+% katex in forester in not as smooth as kodama
+
+\transclude{0008}
+
+\transclude{0009}

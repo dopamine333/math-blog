@@ -1,0 +1,16 @@
+\date{2026-10-31T04:30:12Z}
+\title{Monomorphism}
+\taxon{Definition}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{
+
+A morphism #{f : A \r B} in a category \CCat is called a \strong{monomorphism} if
+
+##{ f g = f h \text{ implies } g = h }
+
+for all morphisms #{g, h: C \r A}. 
+}
+
+\p{In this case, we also write #{f : A \hookrightarrow B} or say #{f} is \strong{monic}.}

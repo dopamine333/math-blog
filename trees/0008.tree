@@ -1,0 +1,13 @@
+\date{2026-10-31T05:20:05Z}
+\title{Subobject inclusion relation}
+\taxon{Definition}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{
+
+For [monomorphisms](0006) #{u, v} into the same object #{A} in a category \CCat, we say #{u} is \strong{included} in #{v}, denoted by #{u \le v}, if
+
+##{x \in u \text{ implies } x \in v}
+
+for all [generalized elements](0002) #{x} of #{A}. Recall that #{x \in u} denotes the [subobject membership relation](0007).}

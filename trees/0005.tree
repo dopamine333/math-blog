@@ -1,0 +1,16 @@
+\title{Terminal object}
+\taxon{Definition}
+\date{2026-10-31T03:13:08Z}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{Let \CCat be a category. An object #{1} in \CCat is called a \strong{terminal object} of \CCat if for any object #{A} in \CCat, there exists a unique morphism from #{A} to #{1}. Explicitly,
+
+\ul{
+
+\li{we have a morphism #{\bang_A : A \r 1} for each object #{A} in \CCat, and}
+
+\li{for any morphism #{f : A \r 1}, we have #{f = \bang_A}.}
+}
+
+}

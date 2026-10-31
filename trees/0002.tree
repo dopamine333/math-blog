@@ -1,0 +1,11 @@
+\title{Generalized element}
+\taxon{Definition}
+\author{hsuchingchung}
+\date{2026-10-30T13:20:46Z}
+\import{macros-subobj}
+
+\p{Let #{A} be an object in a category \CCat. A \strong{generalize element} of #{A} is a morphism into #{A} 
+
+##{x : \Gamma \r A.}
+
+The source #{\Gamma} of #{x} is called the \strong{context} of #{x}. In the case \CCat has terminal object #{1}, a generalized element #{x : 1 \rightarrow A} of #{A} whose context is the terminal object #{1} is called a \strong{global element} of #{A}.}

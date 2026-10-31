@@ -1,0 +1,11 @@
+\title{Functional extensionality via generalized element}
+\taxon{Exercise}
+\author{hsuchingchung}
+\date{2026-10-30T13:33:39Z}
+\import{macros-subobj}
+
+\p{
+
+Let #{f, g : A \r B} be two morphisms in a category \CCat. Show that #{f = g} if and only if #{f x = g x} for all [generalized element](0002) #{x} of #{A}.
+
+}

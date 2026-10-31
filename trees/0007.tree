@@ -1,0 +1,15 @@
+\date{2026-10-31T04:43:19Z}
+\title{Subobject membership relation}
+\taxon{Definition}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{
+Let #{x : \Gamma \r A} be a [generalized element](0002) of an object #{A} and #{u : U \hook A} be a [monomorphism](0006) in a category \CCat. We say #{x} is \strong{lying} in #{u}, denoted by #{x \in u}, if #{x} factors through #{u}; that is, we have
+
+##{x = u \phi}
+
+for some morphism #{\phi : \Gamma \r U}. 
+}
+
+\p{Notice that such a #{\phi} is unique: if #{x = u \phi} and #{x = u \psi} for some #{\phi, \psi : \Gamma \r U}, then #{u \phi = u \psi}, which implies #{\phi = \psi} since #{u} is a monomorphism.}

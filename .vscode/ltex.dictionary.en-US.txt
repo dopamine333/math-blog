@@ -1,0 +1,7 @@
+
+# Forester macros (auto-added by extension)
+CCat
+bang
+id
+qed
+r
