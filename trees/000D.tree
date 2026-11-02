@@ -1,0 +1,20 @@
+\date{2026-11-02T05:09:26Z}
+\title{Notation of generalized elements}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+
+\p{ Let \CCat be a category. In general, for an object #{A} in \CCat, we can not talk about what is an \em{element} of #{A}. But from the categorical semantic of type theory or in the lens of Yoneda lemma (do not worry if you did not heard about them), it seems to be a great idea to consider \strong{generalized elements} of #{A}.
+}
+
+\transclude{0002}
+
+\p{The notation of generalized elements makes reasoning about objects like working with "sets." For the reader who knows the Yoneda embedding, it can be viewed as a converter sending an object #{A} to its generalized elements #{\HomC(-, A)} grouped by contexts, where #{\HomC(-, A)} denotes the [contravariant hom functor](000C) of #{A}. The following exercise gives us more intuition about the generalized element notation:}
+
+\p{We use #{f g} to denote the composition #{f ∘ g} of morphisms.}
+
+\transclude{0003}
+
+\p{The use of the word "global" in "global element" comes from the understanding:}
+
+\transclude{0004}

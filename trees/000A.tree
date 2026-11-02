@@ -1,5 +1,34 @@
 \date{2026-10-31T05:30:17Z}
-\title{}
-\taxon{}
+\title{Properties of #{u \le v} and #{u \sim v}}
+\taxon{Exercise}
 \author{hsuchingchung}
 \import{macros-subobj}
+
+\p{
+For any [monomorphisms](0006) #{u,u',v,v',w} into #{A} in a category \CCat and [generalized element](0002) #{x} of #{A}, show the following:
+\ol{
+
+\li{#{u \le v} if and only if #{u} factor through #{v}.}
+\li{#{u \sim v} if and only if #{u = v \phi} for some isomorphism #{\phi : U \iso V}, where #{U, V} are the source of #{u : U \hook A, v : V \hook A} respectively.  }
+\li{The relation #{\le} defines a preorder on monomorphisms into #{A}:
+  \ul{
+  \li{#{u \le u}.}
+  \li{If #{u \le v} and #{v \le w} then #{u \le w}.}
+  }
+}
+\li{The relation #{\sim} defines a equivalence relation on monomorphisms into #{A}:
+  \ul{
+  \li{#{u \sim u}.}
+  \li{If #{u \sim v} then #{v \sim u}.}
+  \li{If #{u \sim v} and #{v \sim w} then #{u \sim w}.}
+  }
+}
+\li{Both relations #{x \in u} and #{u \le v} are well defined with respect to the equivalent relation #{u \sim v}, that is:
+  \ul{
+  \li{If #{u \sim u'} then #{x \in u} if and only if #{x \in u'}.}
+  \li{If #{u \sim u'} and #{v \sim v'} then #{u \le v} if and only if #{u' \le v'}.}
+  }
+}
+
+}
+}

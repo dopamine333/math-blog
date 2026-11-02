@@ -1,0 +1,13 @@
+\date{2026-11-02T01:50:17Z}
+\title{Subobject}
+\taxon{Definition}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{
+
+The \strong{subobjects} on an object #{A} in a category \CCat are the equivalence classes of [monomorphisms](0006) into #{A} quotiented by the [subobject equivalence relation](0009) #{\sim}, denoted by \SubA. In notation:
+
+##{\SubA := \set{ u | u : U \hook V }/{\sim}.}
+
+}

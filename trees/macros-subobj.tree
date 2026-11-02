@@ -1,4 +1,4 @@
-\title{Macros for the project: [Subobject Object](0001)}
+\title{Macros for the project: An gentle introduction to subobject classifier}
 
 \def\CCat{#{\mathcal{C}}}
 \def\r{#{\rightarrow}}
@@ -7,3 +7,9 @@
 \def\bang{#{{!}}}
 \def\qed{#{\blacksquare}}
 \def\hook{#{\hookrightarrow}}
+\def\iso{#{\cong}}
+\def\Sub{#{\operatorname{Sub}}}
+\def\SubA{#{\Sub(A)}}
+\def\SubB{#{\Sub(B)}}
+\def\Hom{#{\operatorname{Hom}}}
+\def\HomC{#{\Hom_\CCat}}

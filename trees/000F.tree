@@ -1,0 +1,51 @@
+\date{2026-11-02T09:30:42Z}
+\title{Definition of subobjects}
+\author{hsuchingchung}
+\import{macros-subobj}
+
+\p{For the generalization of a subset, we should look at a [monomorphism](0006) #{i : U \hook A}. In the notation of generalized elements, the condition of #{i : U \hook A} being a monomorphism is exactly that, for all generalized elements #{x, y} of #{U} with the same context, if #{i x = i y} then #{x = y}. Notice that #{i x, i y} are generalized elements of #{A}. Therefore, for each object #{\Gamma}, the post-composition by #{i}:
+
+##{
+\begin{aligned}
+   (i \circ) : \HomC(\Gamma, U) &\r \HomC(\Gamma, A) \\
+   x &\mapsto i x
+\end{aligned}  
+}
+
+can be seen as an inclusion map from generalized elements of #{U} to they of #{A}.}
+
+\p{We can recover the notation of an element lying a subset, the inclusion relation between two subsets, and when two subsets are considered equal.}
+
+
+\transclude{0007}
+
+\transclude{0008}
+
+\transclude{0009}
+
+\p{After we have the membership relation #{x \in u}, all the other definitions #{u \le v, u \sim v} mimic the behavier of a subset in set theory.}
+
+\p{Remarkably, in the above definition of #{u \le v}, we hide the sources #{\Gamma, U, V} of morphisms #{x, u, v} intentionally. 
+
+It is somehow \em{irrelevant}, and lets us write computations more like we are dealing with sets. In the following exercise, try to avoid explicitly writing the sources of morphisms as much as possible!}
+
+\p{We will see some examples of monomorphisms in the next section. 
+
+First, let us make sure those definitions have the properties we expected and verify they match [the definitions in nLab](https://ncatlab.org/nlab/show/subobject##as_classes_of_monomorphisms).}
+
+\transclude{000A}
+
+\p{We should close this section by giving the definition of the \strong{subobjects} of an object #{A}.}
+
+\transclude{000B}
+
+\p{
+
+[As an abuse of notation](https://en.wikipedia.org/wiki/Abuse_of_notation##Equivalence_classes),  
+for two monomorphisms #{u,v} into #{A}, instead of writing #{[u]} for the subobject represented by #{u} and #{[u] = [v]} for #{u, v} are representing the same subobject, we just write #{u \in \SubA} and #{u \sim v}.
+
+}
+
+\p{well powered ?}
+
+
