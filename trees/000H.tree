@@ -1,0 +1,22 @@
+\date{2026-11-03T14:54:42Z}
+\title{Weeknotes 2026-W44}
+\author{hsuchingchung}
+
+\p{I wrote a [sketch](subobject-classifier-obsidian) of an introduction to the subobject classifier last Thursday. I was focusing on math and wrote any English that came to mind. It turned out to be filled with 渾然天成的 grammar errors. I have been rewriting the sketch as a polished blog and trying to host it on Github this week. For the choice of the blog tool, I tried [Forester](https://www.forester-notes.org/index/), a Zettelkasten system for math notes, and [Kodama](https://github.com/kodama-community/kodama), a variation of Forester that allows Typst. A wise man once said: Stay away from LaTeX and use Typst to make your life better. But I still chose Forester for the bigger community and support (pain).}
+
+\p{I use the following steps to rewrite my English in the sketch:
+
+\ol{
+\li{Pay attention to the grammar of the sentences and read them aloud. Try my best to fix them.}
+
+\li{Use the prompt \code{point out the grammar errors but do not fix it} with every section I have rewritten, and get 10+ more grammar errors.
+}
+
+\li{Be confused by the vocabulary about English grammar rules. Who knows the English of 被動分詞 is "Passive Participle"?}
+
+\li{Repeat the above steps until hours have passed and it's dinner time or the bus is coming and I need to go home. }
+
+}
+
+The [result](0001) (I only had time to rewrite the first two chapters) looks good to me. I may need to tweak my method, otherwise I may not even read any synthetic differential geometry by the end of this semester. One of my friends also vibecoded a [Forester-like Typst blog tool](https://github.com/justinvulz/tola-forester), and he converted my sketch to [this](subobject-classifier-tola-forester) in just 10 minutes... }
+
