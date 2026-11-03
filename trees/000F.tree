@@ -41,7 +41,7 @@ First, let us make sure those definitions have the properties we expected and ve
 
 \p{
 
-[As an abuse of notation](https://en.wikipedia.org/wiki/Abuse_of_notation##Equivalence_classes),  
+[As an abuse of notation](https://en.wikipedia.org/wiki/Abuse_of_notation#Equivalence_classes),  
 for two monomorphisms #{u,v} into #{A}, instead of writing #{[u]} for the subobject represented by #{u} and #{[u] = [v]} for #{u, v} are representing the same subobject, we just write #{u \in \SubA} and #{u \sim v}.
 
 }

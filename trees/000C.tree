@@ -5,3 +5,36 @@
 \import{macros-subobj}
 
 
+\p{Let \CCat be a \strong{locally small category}, i.e. the collection #{\HomC(A, B)} of morphisms from #{A} to #{B} is a set for each object #{A, B} in \CCat. Let \Set denotes the category of sets.
+}
+\p{Fix an object #{A} in \CCat, the \strong{covariant hom functor} of #{A} is defined as:
+
+##{
+\begin{aligned}
+  \HomC(A, -) : \CCat &\r \Set \\
+  B &\mapsto \HomC(A, B) \\
+  f &\mapsto (f \circ) 
+\end{aligned}  
+}
+
+where #{(f \circ) : \HomC(A, B) \r \HomC(A, C), g \mapsto f g} is the \strong{post-composition} by #{f : B \r C}.
+}
+
+
+\p{
+
+Dually, the \strong{contravariant hom functor} of #{A} is defined as:
+
+##{
+\begin{aligned}
+  \HomC(-, A) : \CCat^\op &\r \Set \\
+  B &\mapsto \HomC(B, A) \\
+  f &\mapsto (\circ f) 
+\end{aligned}  
+}
+
+where #{(\circ f) : \HomC(C, A) \r \HomC(B, A), g \mapsto g f} is the \strong{pre-composition} by #{f : B \r C}, and #{\CCat^\op} denotes the opposite category of \CCat.
+
+}
+
+\p{The associative and identity rules of morphism composition proves #{\HomC(A, -), \HomC(-, A)} are indeed functors.}

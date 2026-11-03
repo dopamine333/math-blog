@@ -43,7 +43,4 @@ We check that these two constructions are inverses of each other:
 
   \li{#{a_1 \bang_\Gamma = a_\Gamma}: Since #{(a_\Gamma)_\Gamma} is "invariant under context substitution", taking #{\sigma := \bang_\Gamma : \Gamma \r 1} gives #{a_1 \bang_\Gamma = a_\Gamma}.}
 }
-
-#{\qed}
-
 }}

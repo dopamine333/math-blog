@@ -3,7 +3,7 @@
 \date{2026-10-30T12:35:38Z}
 \import{macros-subobj}
 
-\p{The subobject classifier seems to be very important in defining a \em{[topos](https://ncatlab.org/nlab/show/topos##ElementaryTopos)}, although I also don't know what a [topos](https://ncatlab.org/nlab/show/topos##what_a_topos_is_like) is. In the process of understanding the definition of the subobject classifier, I think I have become more fluent in the language of representable functors, the Yoneda lemma, and natural transformations. }
+\p{The subobject classifier seems to be very important in defining a \em{[topos](https://ncatlab.org/nlab/show/topos#ElementaryTopos)}, although I also don't know what a [topos](https://ncatlab.org/nlab/show/topos#what_a_topos_is_like) is. In the process of understanding the definition of the subobject classifier, I think I have become more fluent in the language of representable functors, the Yoneda lemma, and natural transformations. }
 
 \p{This blog post introduces concepts and constructions about subobjects, unpacks the definition of a subobject classifier, and shows how a subobject classifier \em{internalizes} them as morphisms. We assume that the reader \em{knows} about the definitions of categories, functors, natural transformations, and pullbacks but may not \em{understand} them. We will tell the story in a brain-friendly way (I hope).
 }

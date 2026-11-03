@@ -13,3 +13,5 @@
 \def\SubB{#{\Sub(B)}}
 \def\Hom{#{\operatorname{Hom}}}
 \def\HomC{#{\Hom_\CCat}}
+\def\Set{#{\operatorname{Set}}}
+\def\op{#{\mathrm{op}}}
