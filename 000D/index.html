@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html
+lang="en"><head><meta
+charset="utf-8"><meta
+property="og:title"
+content="Notation of generalized elements"><meta
+property="og:description"
+content="Let \mathcal {C} be a category. In general, for an object A in \mathcal {C}, we can not talk about what is an element of A. But from the categorical semantics…"><meta
+property="og:image"
+content="https://dopamine333.github.io/math-blog/og-image.png"><meta
+property="og:image:width"
+content="1200"><meta
+property="og:image:height"
+content="630"><meta
+property="og:type"
+content="article"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"><meta
+name="description"
+content="Let \mathcal {C} be a category. In general, for an object A in \mathcal {C}, we can not talk about what is an element of A. But from the categorical semantics…"><link
+rel="icon"
+sizes="any"
+href="/math-blog/favicon.ico"><link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="/math-blog/favicon-32x32.png"><link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="/math-blog/favicon-16x16.png"><link
+rel="apple-touch-icon"
+href="/math-blog/apple-touch-icon.png"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-regular.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-300.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-700.woff2"><script
+type="module">window.manifestHref = '/math-blog/forest.json';</script><link
+rel="stylesheet"
+href="/math-blog/style.css"><link
+rel="stylesheet"
+href="/math-blog/katex.min.css"><script
+src="/math-blog/katex.min.js"
+defer></script><script
+type="module"
+src="/math-blog/min.js"></script><title>Notation of generalized elements</title></head><body><div
+id="main-wrapper"><header
+class="header"><nav
+id="home-link"
+class="nav"><div
+class="logo"><a
+href="/math-blog/index"
+title="home"
+data-hx-target="#main-wrapper"
+data-hx-swap="morph:innerHTML show:window:top">« Home</a></div></nav></header><main
+id="grid-wrapper"><article><section
+class="block"><header><h1><span
+class="taxon"></span>Notation of generalized elements <a
+class="slug"
+href="/math-blog/000D">[000D]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml"> Let <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> be a category. In general, for an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we can not talk about what is an <em>element</em> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. But from the categorical semantics of type theory or in the lens of Yoneda lemma (do not worry if you did not heard about them), it seems to be a great idea to consider <strong>generalized elements</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata numbered"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0002-2f"><header><h1><span
+class="taxon">Definition <span
+class="section-number"></span></span>Generalized element <a
+class="slug"
+href="/math-blog/0002">[0002]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Let <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> be an object in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. A <strong>generalize element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x : \Gamma  \rightarrow  A.">x : \Gamma  \rightarrow  A.</span>
+
+The source <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is called the <strong>context</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span>. In the case <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> has terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>, a generalized element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \rightarrow  A">x : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> whose context is the terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is called a <strong>global element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The notation of generalized elements makes reasoning about objects like working with "sets." For the reader who knows the Yoneda embedding, it can be viewed as a converter sending an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> to its generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> grouped by contexts, where <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> denotes the <span
+class="link local"><a
+href="/math-blog/000C">contravariant hom functor</a></span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. The following exercise gives us more intuition about the generalized element notation:</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We use <span
+class="katex-math"
+data-display="inline"
+data-tex="f g">f g</span> to denote the composition <span
+class="katex-math"
+data-display="inline"
+data-tex="f ∘ g">f ∘ g</span> of morphisms.</p><section
+class="block hide-metadata numbered"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0003-2f"><header><h1><span
+class="taxon">Exercise <span
+class="section-number"></span></span>Functional extensionality via generalized element <a
+class="slug"
+href="/math-blog/0003">[0003]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="f, g : A \rightarrow  B">f, g : A \rightarrow  B</span> be two morphisms in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. Show that <span
+class="katex-math"
+data-display="inline"
+data-tex="f = g">f = g</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="f x = g x">f x = g x</span> for all <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+
+</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The use of the word "global" in "global element" comes from the understanding:</p><section
+class="block hide-metadata numbered"
+data-taxon="Proposition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0004-2f"><header><h1><span
+class="taxon">Proposition <span
+class="section-number"></span></span>Justification of the name of global elements <a
+class="slug"
+href="/math-blog/0004">[0004]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> with a <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">An assignment <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="a_\Gamma  : \Gamma  \rightarrow  A">a_\Gamma  : \Gamma  \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> is called a <strong>global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span></strong> if it is <em>invariant under context substitution</em> in the sense that:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="a_\Delta  \sigma  = a_\Gamma ">a_\Delta  \sigma  = a_\Gamma </span>
+
+for all morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  : \Gamma  \rightarrow  \Delta ">\sigma  : \Gamma  \rightarrow  \Delta </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Show that there is a one-to-one correspondence between global elements <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and global assignments of generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata numbered"
+data-taxon="Proof"
+id="id--5b780-2c-201916-29"><header><h1><span
+class="taxon">Proof <span
+class="section-number"></span></span> </h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Given a global element <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, we can consider the assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A">c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A</span>
+
+for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, where the morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  : \Gamma  \rightarrow  1">{!}_\Gamma  : \Gamma  \rightarrow  1</span> is the unique morphism into the <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>. Then <span
+class="katex-math"
+data-display="inline"
+data-tex="(c {!}_\Gamma )_\Gamma ">(c {!}_\Gamma )_\Gamma </span> is invariant under context substitution since for any morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma : \Gamma  \rightarrow  \Delta ">\sigma : \Gamma  \rightarrow  \Delta </span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  = {!}_\Delta  \sigma ">{!}_\Gamma  = {!}_\Delta  \sigma </span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma ">{!}_\Gamma </span>, and so <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_\Gamma  = c {!}_\Delta  \sigma ">c {!}_\Gamma  = c {!}_\Delta  \sigma </span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Conversely, let <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> be a global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. We have a global element 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex=" a_1 : 1 \rightarrow  A"> a_1 : 1 \rightarrow  A</span>
+
+of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+We check that these two constructions are inverses of each other:
+
+<ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c">c {!}_1 = c</span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1">{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1</span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1">{!}_1</span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c \operatorname {id}_1 = c">c {!}_1 = c \operatorname {id}_1 = c</span>.</li>
+
+  <li><span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> is "invariant under context substitution", taking <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1">\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1</span> gives <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>.</li></ul></p></div></section></div></section></div></section><footer><section
+class="block"><header><h1><span
+class="taxon"></span>Context </h1><div
+class="metadata"><ul></ul></div></header><div
+class="mainmatter"><section
+class="block"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0001-2f"><header><h1><span
+class="taxon"></span>An gentle introduction to subobject classifier <a
+class="slug"
+href="/math-blog/0001">[0001]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><p
+xmlns:html="http://www.w3.org/1999/xhtml">The subobject classifier seems to be very important in defining a <em><span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/topos#ElementaryTopos">topos</a></span></em>, although I also don't know what a <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/topos#what_a_topos_is_like">topos</a></span> is. In the process of understanding the definition of the subobject classifier, I think I have become more fluent in the language of representable functors, the Yoneda lemma, and natural transformations. </p><p
+xmlns:html="http://www.w3.org/1999/xhtml">This blog post introduces concepts and constructions about subobjects, unpacks the definition of a subobject classifier, and shows how a subobject classifier <em>internalizes</em> them as morphisms. We assume that the reader <em>knows</em> about the definitions of categories, functors, natural transformations, and pullbacks but may not <em>understand</em> them. We will tell the story in a brain-friendly way (I hope).
+</p><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000D-2f"><header><h1><span
+class="taxon"></span>Notation of generalized elements <a
+class="slug"
+href="/math-blog/000D">[000D]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml"> Let <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> be a category. In general, for an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we can not talk about what is an <em>element</em> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. But from the categorical semantics of type theory or in the lens of Yoneda lemma (do not worry if you did not heard about them), it seems to be a great idea to consider <strong>generalized elements</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0002-2f"><header><h1><span
+class="taxon">Definition. </span>Generalized element <a
+class="slug"
+href="/math-blog/0002">[0002]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Let <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> be an object in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. A <strong>generalize element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x : \Gamma  \rightarrow  A.">x : \Gamma  \rightarrow  A.</span>
+
+The source <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is called the <strong>context</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span>. In the case <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> has terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>, a generalized element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \rightarrow  A">x : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> whose context is the terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is called a <strong>global element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The notation of generalized elements makes reasoning about objects like working with "sets." For the reader who knows the Yoneda embedding, it can be viewed as a converter sending an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> to its generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> grouped by contexts, where <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> denotes the <span
+class="link local"><a
+href="/math-blog/000C">contravariant hom functor</a></span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. The following exercise gives us more intuition about the generalized element notation:</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We use <span
+class="katex-math"
+data-display="inline"
+data-tex="f g">f g</span> to denote the composition <span
+class="katex-math"
+data-display="inline"
+data-tex="f ∘ g">f ∘ g</span> of morphisms.</p><section
+class="block hide-metadata"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0003-2f"><header><h1><span
+class="taxon">Exercise. </span>Functional extensionality via generalized element <a
+class="slug"
+href="/math-blog/0003">[0003]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="f, g : A \rightarrow  B">f, g : A \rightarrow  B</span> be two morphisms in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. Show that <span
+class="katex-math"
+data-display="inline"
+data-tex="f = g">f = g</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="f x = g x">f x = g x</span> for all <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+
+</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The use of the word "global" in "global element" comes from the understanding:</p><section
+class="block hide-metadata"
+data-taxon="Proposition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0004-2f"><header><h1><span
+class="taxon">Proposition. </span>Justification of the name of global elements <a
+class="slug"
+href="/math-blog/0004">[0004]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> with a <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">An assignment <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="a_\Gamma  : \Gamma  \rightarrow  A">a_\Gamma  : \Gamma  \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> is called a <strong>global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span></strong> if it is <em>invariant under context substitution</em> in the sense that:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="a_\Delta  \sigma  = a_\Gamma ">a_\Delta  \sigma  = a_\Gamma </span>
+
+for all morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  : \Gamma  \rightarrow  \Delta ">\sigma  : \Gamma  \rightarrow  \Delta </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Show that there is a one-to-one correspondence between global elements <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and global assignments of generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata"
+data-taxon="Proof"
+id="id--5b780-2c-201916-29"><header><h1><span
+class="taxon">Proof. </span> </h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Given a global element <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, we can consider the assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A">c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A</span>
+
+for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, where the morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  : \Gamma  \rightarrow  1">{!}_\Gamma  : \Gamma  \rightarrow  1</span> is the unique morphism into the <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>. Then <span
+class="katex-math"
+data-display="inline"
+data-tex="(c {!}_\Gamma )_\Gamma ">(c {!}_\Gamma )_\Gamma </span> is invariant under context substitution since for any morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma : \Gamma  \rightarrow  \Delta ">\sigma : \Gamma  \rightarrow  \Delta </span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  = {!}_\Delta  \sigma ">{!}_\Gamma  = {!}_\Delta  \sigma </span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma ">{!}_\Gamma </span>, and so <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_\Gamma  = c {!}_\Delta  \sigma ">c {!}_\Gamma  = c {!}_\Delta  \sigma </span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Conversely, let <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> be a global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. We have a global element 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex=" a_1 : 1 \rightarrow  A"> a_1 : 1 \rightarrow  A</span>
+
+of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+We check that these two constructions are inverses of each other:
+
+<ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c">c {!}_1 = c</span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1">{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1</span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1">{!}_1</span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c \operatorname {id}_1 = c">c {!}_1 = c \operatorname {id}_1 = c</span>.</li>
+
+  <li><span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> is "invariant under context substitution", taking <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1">\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1</span> gives <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>.</li></ul></p></div></section></div></section></div></section><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000F-2f"><header><h1><span
+class="taxon"></span>Definition of subobjects <a
+class="slug"
+href="/math-blog/000F">[000F]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">For the generalization of a subset, we should look at a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span>. In the notation of generalized elements, the condition of <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span> being a monomorphism is exactly that, for all generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x, y">x, y</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> with the same context, if <span
+class="katex-math"
+data-display="inline"
+data-tex="i x = i y">i x = i y</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x = y">x = y</span>. Notice that <span
+class="katex-math"
+data-display="inline"
+data-tex="i x, i y">i x, i y</span> are generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Therefore, for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, the post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="i">i</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+">
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+</span>
+
+can be seen as an inclusion map from generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> to they of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We can recover the notation of an element lying a subset, the inclusion relation between two subsets, and when two subsets are considered equal.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0007-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject membership relation <a
+class="slug"
+href="/math-blog/0007">[0007]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Gamma  \rightarrow  A">x : \Gamma  \rightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A">u : U \hookrightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. We say <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is <strong>lying</strong> in <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, if <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> factors through <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>; that is, we have
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x = u \phi ">x = u \phi </span>
+
+for some morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : \Gamma  \rightarrow  U">\phi  : \Gamma  \rightarrow  U</span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Notice that such a <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi ">\phi </span> is unique: if <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \phi ">x = u \phi </span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \psi ">x = u \psi </span> for some <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi , \psi  : \Gamma  \rightarrow  U">\phi , \psi  : \Gamma  \rightarrow  U</span>, then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \phi  = u \psi ">u \phi  = u \psi </span>, which implies <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  = \psi ">\phi  = \psi </span> since <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is a monomorphism.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0008-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject inclusion relation <a
+class="slug"
+href="/math-blog/0008">[0008]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+For <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we say <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is <strong>included</strong> in <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, if
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x \in  u \text { implies } x \in  v">x \in  u \text { implies } x \in  v</span>
+
+for all <span
+class="link local"><a
+href="/math-blog/0002">generalized elements</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> denotes the <span
+class="link local"><a
+href="/math-blog/0007">subobject membership relation</a></span>.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0009-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject equivalence relation <a
+class="slug"
+href="/math-blog/0009">[0009]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Two <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are considered <strong>equivalent</strong> if <span
+class="katex-math"
+data-display="block"
+data-tex="u \le  v \text { and } v \le  u,">u \le  v \text { and } v \le  u,</span> denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> denotes the <span
+class="link local"><a
+href="/math-blog/0008">subobject inclusion relation</a></span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">After we have the membership relation <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, all the other definitions <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v, u \sim  v">u \le  v, u \sim  v</span> mimic the behavier of a subset in set theory.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Remarkably, in the above definition of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, we hide the sources <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma , U, V">\Gamma , U, V</span> of morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="x, u, v">x, u, v</span> intentionally. 
+
+It is somehow <em>irrelevant</em>, and lets us write computations more like we are dealing with sets. In the following exercise, try to avoid explicitly writing the sources of morphisms as much as possible!</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We will see some examples of monomorphisms in the next section. 
+
+First, let us make sure those definitions have the properties we expected and verify they match <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/subobject#%23as_classes_of_monomorphisms">the definitions in nLab</a></span>.</p><section
+class="block hide-metadata"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000A-2f"><header><h1><span
+class="taxon">Exercise. </span>Properties of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> <a
+class="slug"
+href="/math-blog/000A">[000A]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+For any <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u,u',v,v',w">u,u',v,v',w</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> and <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, show the following:
+<ol><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> factor through <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>.</li>
+<li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u = v \phi ">u = v \phi </span> for some isomorphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : U \cong  V">\phi  : U \cong  V</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="U, V">U, V</span> are the source of <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A, v : V \hookrightarrow  A">u : U \hookrightarrow  A, v : V \hookrightarrow  A</span> respectively.  </li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\le ">\le </span> defines a preorder on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  u">u \le  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \le  w">v \le  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  w">u \le  w</span>.</li></ul></li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span> defines a equivalence relation on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u">u \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  u">v \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  w">v \sim  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  w">u \sim  w</span>.</li></ul></li>
+<li>Both relations <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> are well defined with respect to the equivalent relation <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>, that is:
+  <ul><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u'">x \in  u'</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  v'">v \sim  v'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u' \le  v'">u' \le  v'</span>.</li></ul></li></ol></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">We should close this section by giving the definition of the <strong>subobjects</strong> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000B-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject <a
+class="slug"
+href="/math-blog/000B">[000B]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+The <strong>subobjects</strong> on an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are the equivalence classes of <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> quotiented by the <span
+class="link local"><a
+href="/math-blog/0009">subobject equivalence relation</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Sub}(A)">\operatorname {Sub}(A)</span>. In notation:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.">\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.</span></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml"><span
+class="link external"><a
+href="https://en.wikipedia.org/wiki/Abuse_of_notation#Equivalence_classes">As an abuse of notation</a></span>,  
+for two monomorphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="u,v">u,v</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, instead of writing <span
+class="katex-math"
+data-display="inline"
+data-tex="[u]">[u]</span> for the subobject represented by <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="[u] = [v]">[u] = [v]</span> for <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> are representing the same subobject, we just write <span
+class="katex-math"
+data-display="inline"
+data-tex="u \in  \operatorname {Sub}(A)">u \in  \operatorname {Sub}(A)</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>.
+
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">well powered ?</p></div></section></div></section></div></section><section
+class="block"><header><h1><span
+class="taxon"></span>Related </h1><div
+class="metadata"><ul></ul></div></header><div
+class="mainmatter"><section
+class="block"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000C-2f"><header><h1><span
+class="taxon">Definition. </span>Hom functor <a
+class="slug"
+href="/math-blog/000C">[000C]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Let <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> be a <strong>locally small category</strong>, i.e. the collection <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(A, B)">\operatorname {Hom}_\mathcal {C}(A, B)</span> of morphisms from <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> to <span
+class="katex-math"
+data-display="inline"
+data-tex="B">B</span> is a set for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="A, B">A, B</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. Let <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Set}">\operatorname {Set}</span> denotes the category of sets.
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, the <strong>covariant hom functor</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is defined as:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="
+\begin {aligned}
+  \operatorname {Hom}_\mathcal {C}(A, -) : \mathcal {C} &amp;\rightarrow  \operatorname {Set} \\
+  B &amp;\mapsto  \operatorname {Hom}_\mathcal {C}(A, B) \\
+  f &amp;\mapsto  (f \circ ) 
+\end {aligned}  
+">
+\begin {aligned}
+  \operatorname {Hom}_\mathcal {C}(A, -) : \mathcal {C} &amp;\rightarrow  \operatorname {Set} \\
+  B &amp;\mapsto  \operatorname {Hom}_\mathcal {C}(A, B) \\
+  f &amp;\mapsto  (f \circ ) 
+\end {aligned}  
+</span>
+
+where <span
+class="katex-math"
+data-display="inline"
+data-tex="(f \circ ) : \operatorname {Hom}_\mathcal {C}(A, B) \rightarrow  \operatorname {Hom}_\mathcal {C}(A, C), g \mapsto  f g">(f \circ ) : \operatorname {Hom}_\mathcal {C}(A, B) \rightarrow  \operatorname {Hom}_\mathcal {C}(A, C), g \mapsto  f g</span> is the <strong>post-composition</strong> by <span
+class="katex-math"
+data-display="inline"
+data-tex="f : B \rightarrow  C">f : B \rightarrow  C</span>.
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Dually, the <strong>contravariant hom functor</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is defined as:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="
+\begin {aligned}
+  \operatorname {Hom}_\mathcal {C}(-, A) : \mathcal {C}^\mathrm {op} &amp;\rightarrow  \operatorname {Set} \\
+  B &amp;\mapsto  \operatorname {Hom}_\mathcal {C}(B, A) \\
+  f &amp;\mapsto  (\circ  f) 
+\end {aligned}  
+">
+\begin {aligned}
+  \operatorname {Hom}_\mathcal {C}(-, A) : \mathcal {C}^\mathrm {op} &amp;\rightarrow  \operatorname {Set} \\
+  B &amp;\mapsto  \operatorname {Hom}_\mathcal {C}(B, A) \\
+  f &amp;\mapsto  (\circ  f) 
+\end {aligned}  
+</span>
+
+where <span
+class="katex-math"
+data-display="inline"
+data-tex="(\circ  f) : \operatorname {Hom}_\mathcal {C}(C, A) \rightarrow  \operatorname {Hom}_\mathcal {C}(B, A), g \mapsto  g f">(\circ  f) : \operatorname {Hom}_\mathcal {C}(C, A) \rightarrow  \operatorname {Hom}_\mathcal {C}(B, A), g \mapsto  g f</span> is the <strong>pre-composition</strong> by <span
+class="katex-math"
+data-display="inline"
+data-tex="f : B \rightarrow  C">f : B \rightarrow  C</span>, and <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}^\mathrm {op}">\mathcal {C}^\mathrm {op}</span> denotes the opposite category of <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>.
+
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">The associative and identity rules of morphism composition proves <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(A, -), \operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(A, -), \operatorname {Hom}_\mathcal {C}(-, A)</span> are indeed functors.</p></div></section></div></section></footer></article><nav
+id="toc"><div
+class="block"><h1>Table of Contents</h1><ul
+class="block"><li
+class="numbered"><a
+class="bullet"
+href="/math-blog/0002"
+title="Generalized element[0002]">■</a><span
+class="link local"
+data-target="#id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0002-2f"><span
+class="taxon">Definition <span
+class="section-number"></span></span>Generalized element</span></li><li
+class="numbered"><a
+class="bullet"
+href="/math-blog/0003"
+title="Functional extensionality via generalized element[0003]">■</a><span
+class="link local"
+data-target="#id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0003-2f"><span
+class="taxon">Exercise <span
+class="section-number"></span></span>Functional extensionality via generalized element</span></li><li
+class="numbered"><a
+class="bullet"
+href="/math-blog/0004"
+title="Justification of the name of global elements[0004]">■</a><span
+class="link local"
+data-target="#id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0004-2f"><span
+class="taxon">Proposition <span
+class="section-number"></span></span>Justification of the name of global elements</span><ul
+class="block"><li
+class="numbered"><a
+class="bullet">■</a><span
+class="link local"
+data-target="#id--5b780-2c-201916-29"><span
+class="taxon">Proof <span
+class="section-number"></span></span></span></li></ul></li></ul></div></nav></main></div></body></html>

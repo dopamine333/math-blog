@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html
+lang="en"><head><meta
+charset="utf-8"><meta
+property="og:title"
+content="Properties of u \le  v and u \sim  v"><meta
+property="og:description"
+content="For any monomorphisms u,u',v,v',w into A in a category \mathcal {C} and generalized element x of A, show the following: u \le v if and only if u factor through…"><meta
+property="og:image"
+content="https://dopamine333.github.io/math-blog/og-image.png"><meta
+property="og:image:width"
+content="1200"><meta
+property="og:image:height"
+content="630"><meta
+property="og:type"
+content="article"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"><meta
+name="description"
+content="For any monomorphisms u,u',v,v',w into A in a category \mathcal {C} and generalized element x of A, show the following: u \le v if and only if u factor through…"><link
+rel="icon"
+sizes="any"
+href="/math-blog/favicon.ico"><link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="/math-blog/favicon-32x32.png"><link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="/math-blog/favicon-16x16.png"><link
+rel="apple-touch-icon"
+href="/math-blog/apple-touch-icon.png"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-regular.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-300.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-700.woff2"><script
+type="module">window.manifestHref = '/math-blog/forest.json';</script><link
+rel="stylesheet"
+href="/math-blog/style.css"><link
+rel="stylesheet"
+href="/math-blog/katex.min.css"><script
+src="/math-blog/katex.min.js"
+defer></script><script
+type="module"
+src="/math-blog/min.js"></script><title>Properties of u \le  v and u \sim  v</title></head><body><div
+id="main-wrapper"><header
+class="header"><nav
+id="home-link"
+class="nav"><div
+class="logo"><a
+href="/math-blog/index"
+title="home"
+data-hx-target="#main-wrapper"
+data-hx-swap="morph:innerHTML show:window:top">« Home</a></div></nav></header><main
+id="grid-wrapper"><article><section
+class="block"><header><h1><span
+class="taxon">Exercise. </span>Properties of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> <a
+class="slug"
+href="/math-blog/000A">[000A]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+For any <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u,u',v,v',w">u,u',v,v',w</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> and <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, show the following:
+<ol><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> factor through <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>.</li>
+<li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u = v \phi ">u = v \phi </span> for some isomorphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : U \cong  V">\phi  : U \cong  V</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="U, V">U, V</span> are the source of <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A, v : V \hookrightarrow  A">u : U \hookrightarrow  A, v : V \hookrightarrow  A</span> respectively.  </li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\le ">\le </span> defines a preorder on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  u">u \le  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \le  w">v \le  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  w">u \le  w</span>.</li></ul></li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span> defines a equivalence relation on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u">u \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  u">v \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  w">v \sim  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  w">u \sim  w</span>.</li></ul></li>
+<li>Both relations <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> are well defined with respect to the equivalent relation <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>, that is:
+  <ul><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u'">x \in  u'</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  v'">v \sim  v'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u' \le  v'">u' \le  v'</span>.</li></ul></li></ol></p></div></section><footer><section
+class="block"><header><h1><span
+class="taxon"></span>Context </h1><div
+class="metadata"><ul></ul></div></header><div
+class="mainmatter"><section
+class="block"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000F-2f"><header><h1><span
+class="taxon"></span>Definition of subobjects <a
+class="slug"
+href="/math-blog/000F">[000F]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><p
+xmlns:html="http://www.w3.org/1999/xhtml">For the generalization of a subset, we should look at a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span>. In the notation of generalized elements, the condition of <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span> being a monomorphism is exactly that, for all generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x, y">x, y</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> with the same context, if <span
+class="katex-math"
+data-display="inline"
+data-tex="i x = i y">i x = i y</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x = y">x = y</span>. Notice that <span
+class="katex-math"
+data-display="inline"
+data-tex="i x, i y">i x, i y</span> are generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Therefore, for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, the post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="i">i</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+">
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+</span>
+
+can be seen as an inclusion map from generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> to they of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We can recover the notation of an element lying a subset, the inclusion relation between two subsets, and when two subsets are considered equal.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0007-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject membership relation <a
+class="slug"
+href="/math-blog/0007">[0007]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Gamma  \rightarrow  A">x : \Gamma  \rightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A">u : U \hookrightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. We say <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is <strong>lying</strong> in <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, if <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> factors through <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>; that is, we have
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x = u \phi ">x = u \phi </span>
+
+for some morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : \Gamma  \rightarrow  U">\phi  : \Gamma  \rightarrow  U</span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Notice that such a <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi ">\phi </span> is unique: if <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \phi ">x = u \phi </span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \psi ">x = u \psi </span> for some <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi , \psi  : \Gamma  \rightarrow  U">\phi , \psi  : \Gamma  \rightarrow  U</span>, then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \phi  = u \psi ">u \phi  = u \psi </span>, which implies <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  = \psi ">\phi  = \psi </span> since <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is a monomorphism.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0008-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject inclusion relation <a
+class="slug"
+href="/math-blog/0008">[0008]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+For <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we say <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is <strong>included</strong> in <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, if
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x \in  u \text { implies } x \in  v">x \in  u \text { implies } x \in  v</span>
+
+for all <span
+class="link local"><a
+href="/math-blog/0002">generalized elements</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> denotes the <span
+class="link local"><a
+href="/math-blog/0007">subobject membership relation</a></span>.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0009-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject equivalence relation <a
+class="slug"
+href="/math-blog/0009">[0009]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Two <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are considered <strong>equivalent</strong> if <span
+class="katex-math"
+data-display="block"
+data-tex="u \le  v \text { and } v \le  u,">u \le  v \text { and } v \le  u,</span> denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> denotes the <span
+class="link local"><a
+href="/math-blog/0008">subobject inclusion relation</a></span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">After we have the membership relation <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, all the other definitions <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v, u \sim  v">u \le  v, u \sim  v</span> mimic the behavier of a subset in set theory.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Remarkably, in the above definition of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, we hide the sources <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma , U, V">\Gamma , U, V</span> of morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="x, u, v">x, u, v</span> intentionally. 
+
+It is somehow <em>irrelevant</em>, and lets us write computations more like we are dealing with sets. In the following exercise, try to avoid explicitly writing the sources of morphisms as much as possible!</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We will see some examples of monomorphisms in the next section. 
+
+First, let us make sure those definitions have the properties we expected and verify they match <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/subobject#%23as_classes_of_monomorphisms">the definitions in nLab</a></span>.</p><section
+class="block hide-metadata"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000A-2f"><header><h1><span
+class="taxon">Exercise. </span>Properties of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> <a
+class="slug"
+href="/math-blog/000A">[000A]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+For any <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u,u',v,v',w">u,u',v,v',w</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> and <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, show the following:
+<ol><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> factor through <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>.</li>
+<li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u = v \phi ">u = v \phi </span> for some isomorphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : U \cong  V">\phi  : U \cong  V</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="U, V">U, V</span> are the source of <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A, v : V \hookrightarrow  A">u : U \hookrightarrow  A, v : V \hookrightarrow  A</span> respectively.  </li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\le ">\le </span> defines a preorder on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  u">u \le  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \le  w">v \le  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  w">u \le  w</span>.</li></ul></li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span> defines a equivalence relation on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u">u \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  u">v \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  w">v \sim  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  w">u \sim  w</span>.</li></ul></li>
+<li>Both relations <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> are well defined with respect to the equivalent relation <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>, that is:
+  <ul><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u'">x \in  u'</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  v'">v \sim  v'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u' \le  v'">u' \le  v'</span>.</li></ul></li></ol></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">We should close this section by giving the definition of the <strong>subobjects</strong> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000B-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject <a
+class="slug"
+href="/math-blog/000B">[000B]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+The <strong>subobjects</strong> on an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are the equivalence classes of <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> quotiented by the <span
+class="link local"><a
+href="/math-blog/0009">subobject equivalence relation</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Sub}(A)">\operatorname {Sub}(A)</span>. In notation:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.">\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.</span></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml"><span
+class="link external"><a
+href="https://en.wikipedia.org/wiki/Abuse_of_notation#Equivalence_classes">As an abuse of notation</a></span>,  
+for two monomorphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="u,v">u,v</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, instead of writing <span
+class="katex-math"
+data-display="inline"
+data-tex="[u]">[u]</span> for the subobject represented by <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="[u] = [v]">[u] = [v]</span> for <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> are representing the same subobject, we just write <span
+class="katex-math"
+data-display="inline"
+data-tex="u \in  \operatorname {Sub}(A)">u \in  \operatorname {Sub}(A)</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>.
+
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">well powered ?</p></div></section></div></section><section
+class="block"><header><h1><span
+class="taxon"></span>Related </h1><div
+class="metadata"><ul></ul></div></header><div
+class="mainmatter"><section
+class="block"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0006-2f"><header><h1><span
+class="taxon">Definition. </span>Monomorphism <a
+class="slug"
+href="/math-blog/0006">[0006]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+A morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="f : A \rightarrow  B">f : A \rightarrow  B</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> is called a <strong>monomorphism</strong> if
+
+<span
+class="katex-math"
+data-display="block"
+data-tex=" f g = f h \text { implies } g = h "> f g = f h \text { implies } g = h </span>
+
+for all morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="g, h: C \rightarrow  A">g, h: C \rightarrow  A</span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">In this case, we also write <span
+class="katex-math"
+data-display="inline"
+data-tex="f : A \hookrightarrow  B">f : A \hookrightarrow  B</span> or say <span
+class="katex-math"
+data-display="inline"
+data-tex="f">f</span> is <strong>monic</strong>.</p></div></section><section
+class="block"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0002-2f"><header><h1><span
+class="taxon">Definition. </span>Generalized element <a
+class="slug"
+href="/math-blog/0002">[0002]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Let <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> be an object in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. A <strong>generalize element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x : \Gamma  \rightarrow  A.">x : \Gamma  \rightarrow  A.</span>
+
+The source <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is called the <strong>context</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span>. In the case <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> has terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>, a generalized element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \rightarrow  A">x : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> whose context is the terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is called a <strong>global element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p></div></section></div></section></footer></article></main></div></body></html>
