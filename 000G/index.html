@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html
+lang="en"><head><meta
+charset="utf-8"><meta
+property="og:title"
+content="Weeknotes"><meta
+property="og:description"
+content="Another week has passed..."><meta
+property="og:image"
+content="https://dopamine333.github.io/math-blog/og-image.png"><meta
+property="og:image:width"
+content="1200"><meta
+property="og:image:height"
+content="630"><meta
+property="og:type"
+content="article"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"><meta
+name="description"
+content="Another week has passed..."><link
+rel="icon"
+sizes="any"
+href="/math-blog/favicon.ico"><link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="/math-blog/favicon-32x32.png"><link
+rel="icon"
+type="image/png"
+sizes="16x16"
+href="/math-blog/favicon-16x16.png"><link
+rel="apple-touch-icon"
+href="/math-blog/apple-touch-icon.png"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-regular.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-300.woff2"><link
+rel="preload"
+as="font"
+type="font/woff2"
+crossorigin="anonymous"
+href="/math-blog/fonts/inria-sans-v14-latin_latin-ext-700.woff2"><script
+type="module">window.manifestHref = '/math-blog/forest.json';</script><link
+rel="stylesheet"
+href="/math-blog/style.css"><link
+rel="stylesheet"
+href="/math-blog/katex.min.css"><script
+src="/math-blog/katex.min.js"
+defer></script><script
+type="module"
+src="/math-blog/min.js"></script><title>Weeknotes</title></head><body><div
+id="main-wrapper"><header
+class="header"><nav
+id="home-link"
+class="nav"><div
+class="logo"><a
+href="/math-blog/index"
+title="home"
+data-hx-target="#main-wrapper"
+data-hx-swap="morph:innerHTML show:window:top">« Home</a></div></nav></header><main
+id="grid-wrapper"><article><section
+class="block"><header><h1><span
+class="taxon"></span>Weeknotes <a
+class="slug"
+href="/math-blog/000G">[000G]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 3, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Another week has passed...</p><section
+class="block hide-metadata numbered"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000I-2f"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>Weeknotes 2026-W45: Topos, generalized objects, and syzygies <a
+class="slug"
+href="/math-blog/000I">[000I]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">This week I continue to seek some applications and examples of topos to argue that topos is a better mathematical framework than set theory. Also, I spent some time seeing how constructive mathematics handles flat modules (classically, they use a lot of the law of excluded middle and Zorn's Lemma; I almost went crazy in the algebra class)</p><section
+class="block hide-metadata numbered"
+id="id--5b686-2c-207065-29"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>Some inspiration from Tao's post about topos </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I found I may think about topos alone too much, close to the state of 思而不學則殆. So I opened my browser, searched for "topos," and found an article by Terence Tao: <span
+class="link external"><a
+href="https://terrytao.wordpress.com/2014/07/15/real-analysis-relative-to-a-finite-measure-space/">Real analysis relative to a finite measure space</a></span>. This article uses random variables as an example of a topos. I got some ideas 💡 from it.</p><section
+class="block hide-metadata numbered"
+id="id--5b1166-2c-205156-29"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>A presheaf is a generalized object </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I think I know why people like presheaves a lot: we can think of a presheaf as a generalized object.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix a measure space <span
+class="katex-math"
+data-display="inline"
+data-tex="(\Omega , \mathcal {B}, m)">(\Omega , \mathcal {B}, m)</span>. The article considers more general elements in the following order:</p><ol
+xmlns:html="http://www.w3.org/1999/xhtml"><li>a deterministic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  \mathbb {R}">x \in  \mathbb {R}</span>; it's just a real number.</li>
+
+  <li>a stochastic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  \mathbb {R}">x : \Omega  \to  \mathbb {R}</span> is a measurable function from <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> to <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span>, also called a random variable. (note <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> is equipped with the Borel sigma algebra and Lebesgue measure)</li>
+
+  <li>a stochastic element of a measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="(X, \mathcal {M})">(X, \mathcal {M})</span> is a measurable function <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  X">x : \Omega  \to  X</span>.</li>
+
+  <li>a stochastic set is a presheaf on the category of measurable sets <span
+class="katex-math"
+data-display="inline"
+data-tex="E \subset  \Omega ">E \subset  \Omega </span> (with inclusion as a poset) satisfying some gluing condition and an axiom related to null sets.</li></ol><p
+xmlns:html="http://www.w3.org/1999/xhtml">When I read items 1 and 2, I feel it does quite match the language of generalized elements. The measurable function <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  \mathbb {R}">x : \Omega  \to  \mathbb {R}</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> in the category of measure spaces. It interprets the context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> as "randomness". A deterministic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  \mathbb {R}">x \in  \mathbb {R}</span> is a constant function <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega  \to  \mathbb {R}, \omega  \mapsto  x">\Omega  \to  \mathbb {R}, \omega  \mapsto  x</span>, or a global element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \to  \mathbb {R}">x : 1 \to  \mathbb {R}</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is the terminal object in measure space, the singleton measure space. (Although they aren't: a morphism in the category of measure spaces is not just a measurable function, and I'm not even sure there exists a terminal object in the category of measure spaces or not. Defining the category of measure spaces needs more <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/categories+of+measure+theory#measurable_spaces">work</a></span> then defining the category of measurable spaces.)</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">But item 3 shocked me! Replacing the codomain <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> with a general measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> seems to be a natural step toward general cases. But when I realized it allows the codomain <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> to not live in the same category as the domain <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span>: a measure space <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> has the σ-algebra structure <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {B}">\mathcal {B}</span> with a specified measure <span
+class="katex-math"
+data-display="inline"
+data-tex="m">m</span>, but a measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> only requires a σ-algebra structure <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {M}">\mathcal {M}</span>. It goes beyond the framework of generalized elements: it consider a "morphism" between objects in different categories. However, the assignment <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega  \mapsto  \{\text {measurable functions from } \Omega  \text { to } X\}">\Omega  \mapsto  \{\text {measurable functions from } \Omega  \text { to } X\}</span> is still great enough to form a presheaf! Presheaves seem to be the correct generalization; indeed, item 4 defines stochastic sets as an abstract presheaf rather than measurable functions between some spaces.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">So the evolutionary tree of “elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>” for an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> goes like this:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a "set", it already has the notion of "an element of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>".</li>
+
+<li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is not a set, we can consider the generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, that is, the morphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, equivalently, the contravariant hom-functor <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span>.</li>
+
+<li>In the spirit of generalized elements, the "social identity" of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is fully described by the “memory” <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(\Gamma , A)">\operatorname {Hom}_\mathcal {C}(\Gamma , A)</span> from other objects <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>. If we can implant an artificial memory in each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, i.e., assign a set <span
+class="katex-math"
+data-display="inline"
+data-tex="F(\Gamma )">F(\Gamma )</span> to each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> (of course, satisfying some compatible condition), we can create a virtual object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span>.</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">It is what a presheaf is! We may call a presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> a generalized object, for <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> can only be understood from the point of view of other objects. A fun fact: Denote the Yoneda embedding by <span
+class="katex-math"
+data-display="inline"
+data-tex="A \mapsto  \text {よ} A := \operatorname {Hom}_\mathcal {C}(-, A)">A \mapsto  \text {よ} A := \operatorname {Hom}_\mathcal {C}(-, A)</span>. In the presheaf category, the set of generalized elements of a generalized object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> with the context <span
+class="katex-math"
+data-display="inline"
+data-tex="\text {よ} A">\text {よ} A</span> is indeed the artificial memory <span
+class="katex-math"
+data-display="inline"
+data-tex="F(A)">F(A)</span> on <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>; in other words, <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_{\operatorname {Psh}(\mathcal {C})}(\text {よ} A, F) \cong  F(A)">\operatorname {Hom}_{\operatorname {Psh}(\mathcal {C})}(\text {よ} A, F) \cong  F(A)</span>, exactly the Yoneda Lemma!</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">When a presheaf is representable, there exists an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> such that <span
+class="katex-math"
+data-display="inline"
+data-tex="F \cong  \text {よ} A">F \cong  \text {よ} A</span>. The generalized object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> can be realized through a real object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>!</p></div></section><section
+class="block hide-metadata numbered"
+id="id--5b5159-2c-206913-29"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>Some morphisms should have different types? </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">It also solves the itch of untyped language. In the <span
+class="link local"><a
+href="/math-blog/0001">last post</a></span>, we saw some equations of morphisms in the form:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="f x \sigma  = u \varphi ">f x \sigma  = u \varphi </span>
+
+where all morphisms have different roles: <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is a generalized element, post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="f">f</span> acts like mapping between generalized elements, pre-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma ">\sigma </span> acts like context substitution or changing the state of a generalized element, and <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is a monomorphism used to test whether a generalized element belongs to the subobject determined by <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> (the membership relation <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> is defined as <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> factors through <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, i.e., <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \varphi ">x = u \varphi </span> for some <span
+class="katex-math"
+data-display="inline"
+data-tex="\varphi ">\varphi </span>).</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Think of the generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> as a presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span>; it separates the role of <span
+class="katex-math"
+data-display="inline"
+data-tex="f, x, \sigma ">f, x, \sigma </span> nicely:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li>Given a context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, a generalized element with context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> is an element <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  F(\Gamma )">x \in  F(\Gamma )</span> of the presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> evaluated at <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>.</li>
+
+<li>A morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="f : A \to  B">f : A \to  B</span> lifts to a natural transformation <span
+class="katex-math"
+data-display="inline"
+data-tex="\eta  : F \to  G">\eta  : F \to  G</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="G = \operatorname {Hom}_\mathcal {C}(-, B)">G = \operatorname {Hom}_\mathcal {C}(-, B)</span>, and for any context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, the component <span
+class="katex-math"
+data-display="inline"
+data-tex="\eta _\Gamma  : F(\Gamma ) \to  G(\Gamma ), x \mapsto  f x">\eta _\Gamma  : F(\Gamma ) \to  G(\Gamma ), x \mapsto  f x</span> maps a generalized element by post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="f">f</span>.</li>
+
+<li>The functoriality of <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span> at <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  : \Delta  \to  \Gamma ">\sigma  : \Delta  \to  \Gamma </span> is exactly the pre-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma ">\sigma </span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="F\sigma  : F(\Gamma ) \to  F(\Delta ), x \mapsto  x \sigma ">F\sigma  : F(\Gamma ) \to  F(\Delta ), x \mapsto  x \sigma </span>.</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">(The correct type of <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> should be captured by how it factors other generalized elements, i.e., we should consider the set <span
+class="katex-math"
+data-display="inline"
+data-tex="\{x \mid  x \in  u\}">\{x \mid  x \in  u\}</span>. Our story does not teach us how we should think of <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, but I guess it is related to <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/sieve">sieve</a></span>?)</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">By the way, his blog has a clear storyline, notes some possible confusion about notation, and the motivation for the definitions. Nice to learn.</p></div></section><section
+class="block hide-metadata numbered"
+id="id--5b7068-2c-207873-29"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>A glance at topos in physics </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I knew that topos can somehow handle infinitesimal elements, but to find an application example, I recall how physics uses <span
+class="katex-math"
+data-display="inline"
+data-tex="dx">dx</span> as an actual element; if <span
+class="katex-math"
+data-display="inline"
+data-tex="dx/dt = v">dx/dt = v</span>, we can multiply both sides by <span
+class="katex-math"
+data-display="inline"
+data-tex="dt">dt</span>, so <span
+class="katex-math"
+data-display="inline"
+data-tex="dx = v \, dt">dx = v \, dt</span>. In this direction, I found this video: <span
+class="link external"><a
+href="https://youtu.be/GD20W6vxMI4?si=OmNUwhQrotcvLfjS">"Higher Topos Theory for Physics", talk by Urs Schreiber at Wolfram Winter School on Physics 2024. It talks about some applications of topos in physics</a></span>. I was fascinated by how topoi are widely used in modern physics. It seems it can do differential geometry with infinitesimal elements, curved space as in general relativity, weird logic as in quantum physics, and some fancy gauge theory. Although I don't have any ideas about it yet.</p></div></section><section
+class="block hide-metadata numbered"
+id="id--5b7876-2c-2012843-29"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>An intrinsic characterization of flat modules </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">In our algebra class, the flat modules are defined using a categorical property: fix a ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> (follow the convention in Atiyah-Macdonald; all rings are commutative with unity <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>), an <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is flat if the covariant functor defined by tensoring with <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> over <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="(M \otimes _A -) : A\text {-Mod} \to  A\text {-Mod}">(M \otimes _A -) : A\text {-Mod} \to  A\text {-Mod}</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="N \mapsto  M \otimes _A N">N \mapsto  M \otimes _A N</span> is an exact functor. In general, I quite like definitions using categorical properties; they feel concise and mysterious, and when you unpack them, they often contain a lot of meaningful information. But in this case, it is too mysterious; I still don't know the intuition behind what a flat module is. Although classical logic is not the reason for this confusion, I am still curious how constructive mathematicians think about flat modules. I ended up finding the word "syzygy" in Chapter VIII, Flat module, of <span
+class="link external"><a
+href="https://arxiv.org/abs/1605.04832">Commutative algebra: Constructive methods. Finite projective modules</a></span>.</p><section
+class="block hide-metadata numbered"
+data-taxon="Definition"
+id="id--5b8924-2c-209282-29"><header><h1><span
+class="taxon">Definition <span
+class="section-number"></span></span>Syzygy </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Given a ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and an <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span>. A tuple <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_1, \dots , a_n, x_1, \dots , x_n)">(a_1, \dots , a_n, x_1, \dots , x_n)</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="a_i \in  A">a_i \in  A</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="x_i \in  M">x_i \in  M</span>, is called a <strong>syzygy</strong> if <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1 + \dots  + a_n x_n = 0">a_1 x_1 + \dots  + a_n x_n = 0</span>. In matrix form, a syzygy is a pair <span
+class="katex-math"
+data-display="inline"
+data-tex="(L, X)">(L, X)</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="L \in  A_{1 \times  n}">L \in  A_{1 \times  n}</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="X \in  M_{n \times  1}">X \in  M_{n \times  1}</span>, such that <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">Syzygy is an interesting name; according to the Cambridge Dictionary, a syzygy is an arrangement in which two or more planets, stars, etc. are in a straight line. It describes an image in a module: fix some elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span>, like planets, and vary the coefficients <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1, \dots , a_n">a_1, \dots , a_n</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>; we see <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1, \dots , a_n x_n">a_1 x_1, \dots , a_n x_n</span> moving around as planets move in a solar system. When the special timing arises, the sum of the moving planets, <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1 + \dots  + a_n x_n">a_1 x_1 + \dots  + a_n x_n</span>, is zero; this is when a syzygy occurs. What a vivid name.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Figuring out why a syzygy occurred can provide insight into the elements of the underlying module. A finite set of elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span> is linearly independent over <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> if, for any syzygy <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span> with <span
+class="katex-math"
+data-display="inline"
+data-tex="X = [x_1, \dots , x_n]">X = [x_1, \dots , x_n]</span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="L = 0">L = 0</span>. It is the most "free" situation: there are no relations among <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span>. There are three other cases: The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is bad, the module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is bad, and it is explainable from the choice of <span
+class="katex-math"
+data-display="inline"
+data-tex="L">L</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span>. (badness is measured by how far the module is from a vector space)</p><ol
+xmlns:html="http://www.w3.org/1999/xhtml"><li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {2} \cdot  \bar {3} = 0">\bar {2} \cdot  \bar {3} = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> -module. The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {2}">\bar {2}</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> is already a zero divisor, so we can blame the syzygy on the coefficient ring <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span>.</li>
+
+  <li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="2 \cdot  \bar {3} = 0">2 \cdot  \bar {3} = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>-module. The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="2">2</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span> is good; it is not a zero divisor in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>, but <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {3}">\bar {3}</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> has the property that adding it to itself is zero; it is a torsion element. So the cause of this syzygy should be counted on the module <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span>.</li>
+
+  <li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="2 \cdot  (1/3) + (-3) \cdot  (1/2) = 0">2 \cdot  (1/3) + (-3) \cdot  (1/2) = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Q}">\mathbb {Q}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>-module. The choice of coefficients <span
+class="katex-math"
+data-display="inline"
+data-tex="L = \begin {bmatrix} 2 &amp; -3 \end {bmatrix}">L = \begin {bmatrix} 2 &amp; -3 \end {bmatrix}</span> naturally has the potential to be canceled in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>: take <span
+class="katex-math"
+data-display="inline"
+data-tex="3, 2 \in  \mathbb {Z}">3, 2 \in  \mathbb {Z}</span>, set <span
+class="katex-math"
+data-display="inline"
+data-tex="G = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal }">G = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal }</span>, then <span
+class="katex-math"
+data-display="inline"
+data-tex="L G = \begin {bmatrix} 2 &amp; -3 \end {bmatrix} {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } = 0">L G = \begin {bmatrix} 2 &amp; -3 \end {bmatrix} {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } = 0</span>. The elements <span
+class="katex-math"
+data-display="inline"
+data-tex="X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal }">X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal }</span> in the module happened to be multiples of <span
+class="katex-math"
+data-display="inline"
+data-tex="G">G</span>: <span
+class="katex-math"
+data-display="inline"
+data-tex="X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal } = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } \begin {bmatrix} 1/6 \end {bmatrix} = G Y">X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal } = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } \begin {bmatrix} 1/6 \end {bmatrix} = G Y</span> where <span
+class="katex-math"
+data-display="inline"
+data-tex="Y = \begin {bmatrix} 1/6 \end {bmatrix}">Y = \begin {bmatrix} 1/6 \end {bmatrix}</span>. So 
+  
+  <span
+class="katex-math"
+data-display="block"
+data-tex="L X = L G Y = 0 Y = 0.">L X = L G Y = 0 Y = 0.</span> 
+  
+  We cannot blame this syzygy on the module <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Q}">\mathbb {Q}</span>; these coefficients would naturally be eliminated <span
+class="katex-math"
+data-display="inline"
+data-tex="LG = 0">LG = 0</span> within the ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</li></ol><p
+xmlns:html="http://www.w3.org/1999/xhtml">Formalizing this intuition, we say:</p><section
+class="block hide-metadata numbered"
+data-taxon="Definition"
+id="id--5b11700-2c-2012170-29"><header><h1><span
+class="taxon">Definition <span
+class="section-number"></span></span>Explainable syzygy and Flat module </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">A syzygy <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is <strong>explainable</strong> if there exist <span
+class="katex-math"
+data-display="inline"
+data-tex="G \in  A_{n \times  m}">G \in  A_{n \times  m}</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="Y \in  M_{m \times  1}">Y \in  M_{m \times  1}</span> such that:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li><span
+class="katex-math"
+data-display="inline"
+data-tex="LG = 0">LG = 0</span> (the coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="L">L</span> naturally has the potential to be canceled in <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>) and</li>
+
+  <li><span
+class="katex-math"
+data-display="inline"
+data-tex="X = GY">X = GY</span> (the module elements <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> happen to lie in the image of <span
+class="katex-math"
+data-display="inline"
+data-tex="G">G</span>).</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">An <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is <strong>flat</strong> if every syzygy in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is explainable.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">This definition of a flat module gives an intrinsic description of a flat module, rather than an extrinsic view; <span
+class="katex-math"
+data-display="inline"
+data-tex="M \otimes _A -">M \otimes _A -</span> is an exact functor. The two ways have different advantages. I can’t say which one is the better definition, but I want to emphasize the naming: syzygy and explainable give a strong intuition. I think the name of a generalized element also has the same spirit! (Why a flat module is called flat is still a mystery) This book also has a small poem at the beginning of the chapter on flat modules:</p><blockquote
+xmlns:html="http://www.w3.org/1999/xhtml"><p>Dear elements,</p>
+  <p>If you aren’t free,</p>
+  <p>it isn’t my fault.</p>
+  <p>A flat module.</p></blockquote><p
+xmlns:html="http://www.w3.org/1999/xhtml">I think it is cute!</p></div></section></div></section><section
+class="block hide-metadata numbered"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000H-2f"><header><h1><span
+class="taxon"><span
+class="section-number"></span></span>Weeknotes 2026-W44: Where dreams begin <a
+class="slug"
+href="/math-blog/000H">[000H]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 3, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I wrote a <span
+class="link local"><a
+href="/math-blog/subobject-classifier-obsidian">sketch</a></span> of an introduction to the subobject classifier last Thursday. I was focusing on math and wrote any English that came to mind. It turned out to be filled with 渾然天成的 grammar errors. I have been rewriting the sketch as a polished blog and trying to host it on Github this week. For the choice of the blog tool, I tried <span
+class="link external"><a
+href="https://www.forester-notes.org/index/">Forester</a></span>, a Zettelkasten system for math notes, and <span
+class="link external"><a
+href="https://github.com/kodama-community/kodama">Kodama</a></span>, a variation of Forester that allows Typst. A wise man once said: Stay away from LaTeX and use Typst to make your life better. But I still chose Forester for the bigger community and support (pain).</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">I use the following steps to rewrite my English in the sketch:
+
+<ol><li>Pay attention to the grammar of the sentences and read them aloud. Try my best to fix them.</li>
+
+<li>Use the prompt <code>point out the grammar errors but do not fix it</code> with every section I have rewritten, and get 10+ more grammar errors.
+</li>
+
+<li>Be confused by the vocabulary about English grammar rules. Who knows the English of 被動分詞 is "Passive Participle"?</li>
+
+<li>Repeat the above steps until hours have passed and it's dinner time or the bus is coming and I need to go home. </li></ol>
+
+The <span
+class="link local"><a
+href="/math-blog/0001">result</a></span> (I only had time to rewrite the first two chapters) looks good to me. I may need to tweak my method, otherwise I may not even read any synthetic differential geometry by the end of this semester. One of my friends also vibecoded a <span
+class="link external"><a
+href="https://github.com/justinvulz/tola-forester">Forester-like Typst blog tool</a></span>, and he converted my sketch to <span
+class="link local"><a
+href="/math-blog/subobject-classifier-tola-forester">this</a></span> in just 10 minutes... </p></div></section></div></section><footer><section
+class="block"><header><h1><span
+class="taxon"></span>Context </h1><div
+class="metadata"><ul></ul></div></header><div
+class="mainmatter"><section
+class="block"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2findex-2f"><header><h1><span
+class="taxon"></span>Hello, World! <a
+class="slug"
+href="/math-blog/index">[index]</a></h1><div
+class="metadata"><ul><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter collapsed"><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000G-2f"><header><h1><span
+class="taxon"></span>Weeknotes <a
+class="slug"
+href="/math-blog/000G">[000G]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 3, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Another week has passed...</p><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000I-2f"><header><h1><span
+class="taxon"></span>Weeknotes 2026-W45: Topos, generalized objects, and syzygies <a
+class="slug"
+href="/math-blog/000I">[000I]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">This week I continue to seek some applications and examples of topos to argue that topos is a better mathematical framework than set theory. Also, I spent some time seeing how constructive mathematics handles flat modules (classically, they use a lot of the law of excluded middle and Zorn's Lemma; I almost went crazy in the algebra class)</p><section
+class="block hide-metadata"
+id="id--5b686-2c-207065-29"><header><h1><span
+class="taxon"></span>Some inspiration from Tao's post about topos </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I found I may think about topos alone too much, close to the state of 思而不學則殆. So I opened my browser, searched for "topos," and found an article by Terence Tao: <span
+class="link external"><a
+href="https://terrytao.wordpress.com/2014/07/15/real-analysis-relative-to-a-finite-measure-space/">Real analysis relative to a finite measure space</a></span>. This article uses random variables as an example of a topos. I got some ideas 💡 from it.</p><section
+class="block hide-metadata"
+id="id--5b1166-2c-205156-29"><header><h1><span
+class="taxon"></span>A presheaf is a generalized object </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I think I know why people like presheaves a lot: we can think of a presheaf as a generalized object.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix a measure space <span
+class="katex-math"
+data-display="inline"
+data-tex="(\Omega , \mathcal {B}, m)">(\Omega , \mathcal {B}, m)</span>. The article considers more general elements in the following order:</p><ol
+xmlns:html="http://www.w3.org/1999/xhtml"><li>a deterministic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  \mathbb {R}">x \in  \mathbb {R}</span>; it's just a real number.</li>
+
+  <li>a stochastic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  \mathbb {R}">x : \Omega  \to  \mathbb {R}</span> is a measurable function from <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> to <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span>, also called a random variable. (note <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> is equipped with the Borel sigma algebra and Lebesgue measure)</li>
+
+  <li>a stochastic element of a measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="(X, \mathcal {M})">(X, \mathcal {M})</span> is a measurable function <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  X">x : \Omega  \to  X</span>.</li>
+
+  <li>a stochastic set is a presheaf on the category of measurable sets <span
+class="katex-math"
+data-display="inline"
+data-tex="E \subset  \Omega ">E \subset  \Omega </span> (with inclusion as a poset) satisfying some gluing condition and an axiom related to null sets.</li></ol><p
+xmlns:html="http://www.w3.org/1999/xhtml">When I read items 1 and 2, I feel it does quite match the language of generalized elements. The measurable function <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Omega  \to  \mathbb {R}">x : \Omega  \to  \mathbb {R}</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> in the category of measure spaces. It interprets the context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> as "randomness". A deterministic real number <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  \mathbb {R}">x \in  \mathbb {R}</span> is a constant function <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega  \to  \mathbb {R}, \omega  \mapsto  x">\Omega  \to  \mathbb {R}, \omega  \mapsto  x</span>, or a global element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \to  \mathbb {R}">x : 1 \to  \mathbb {R}</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is the terminal object in measure space, the singleton measure space. (Although they aren't: a morphism in the category of measure spaces is not just a measurable function, and I'm not even sure there exists a terminal object in the category of measure spaces or not. Defining the category of measure spaces needs more <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/categories+of+measure+theory#measurable_spaces">work</a></span> then defining the category of measurable spaces.)</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">But item 3 shocked me! Replacing the codomain <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {R}">\mathbb {R}</span> with a general measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> seems to be a natural step toward general cases. But when I realized it allows the codomain <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> to not live in the same category as the domain <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span>: a measure space <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega ">\Omega </span> has the σ-algebra structure <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {B}">\mathcal {B}</span> with a specified measure <span
+class="katex-math"
+data-display="inline"
+data-tex="m">m</span>, but a measurable space <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> only requires a σ-algebra structure <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {M}">\mathcal {M}</span>. It goes beyond the framework of generalized elements: it consider a "morphism" between objects in different categories. However, the assignment <span
+class="katex-math"
+data-display="inline"
+data-tex="\Omega  \mapsto  \{\text {measurable functions from } \Omega  \text { to } X\}">\Omega  \mapsto  \{\text {measurable functions from } \Omega  \text { to } X\}</span> is still great enough to form a presheaf! Presheaves seem to be the correct generalization; indeed, item 4 defines stochastic sets as an abstract presheaf rather than measurable functions between some spaces.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">So the evolutionary tree of “elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>” for an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> goes like this:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a "set", it already has the notion of "an element of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>".</li>
+
+<li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is not a set, we can consider the generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, that is, the morphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, equivalently, the contravariant hom-functor <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span>.</li>
+
+<li>In the spirit of generalized elements, the "social identity" of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is fully described by the “memory” <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(\Gamma , A)">\operatorname {Hom}_\mathcal {C}(\Gamma , A)</span> from other objects <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>. If we can implant an artificial memory in each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, i.e., assign a set <span
+class="katex-math"
+data-display="inline"
+data-tex="F(\Gamma )">F(\Gamma )</span> to each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> (of course, satisfying some compatible condition), we can create a virtual object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span>.</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">It is what a presheaf is! We may call a presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> a generalized object, for <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> can only be understood from the point of view of other objects. A fun fact: Denote the Yoneda embedding by <span
+class="katex-math"
+data-display="inline"
+data-tex="A \mapsto  \text {よ} A := \operatorname {Hom}_\mathcal {C}(-, A)">A \mapsto  \text {よ} A := \operatorname {Hom}_\mathcal {C}(-, A)</span>. In the presheaf category, the set of generalized elements of a generalized object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> with the context <span
+class="katex-math"
+data-display="inline"
+data-tex="\text {よ} A">\text {よ} A</span> is indeed the artificial memory <span
+class="katex-math"
+data-display="inline"
+data-tex="F(A)">F(A)</span> on <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>; in other words, <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_{\operatorname {Psh}(\mathcal {C})}(\text {よ} A, F) \cong  F(A)">\operatorname {Hom}_{\operatorname {Psh}(\mathcal {C})}(\text {よ} A, F) \cong  F(A)</span>, exactly the Yoneda Lemma!</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">When a presheaf is representable, there exists an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> such that <span
+class="katex-math"
+data-display="inline"
+data-tex="F \cong  \text {よ} A">F \cong  \text {よ} A</span>. The generalized object <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> can be realized through a real object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>!</p></div></section><section
+class="block hide-metadata"
+id="id--5b5159-2c-206913-29"><header><h1><span
+class="taxon"></span>Some morphisms should have different types? </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">It also solves the itch of untyped language. In the <span
+class="link local"><a
+href="/math-blog/0001">last post</a></span>, we saw some equations of morphisms in the form:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="f x \sigma  = u \varphi ">f x \sigma  = u \varphi </span>
+
+where all morphisms have different roles: <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is a generalized element, post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="f">f</span> acts like mapping between generalized elements, pre-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma ">\sigma </span> acts like context substitution or changing the state of a generalized element, and <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is a monomorphism used to test whether a generalized element belongs to the subobject determined by <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> (the membership relation <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> is defined as <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> factors through <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, i.e., <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \varphi ">x = u \varphi </span> for some <span
+class="katex-math"
+data-display="inline"
+data-tex="\varphi ">\varphi </span>).</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Think of the generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> as a presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span>; it separates the role of <span
+class="katex-math"
+data-display="inline"
+data-tex="f, x, \sigma ">f, x, \sigma </span> nicely:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li>Given a context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, a generalized element with context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> is an element <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  F(\Gamma )">x \in  F(\Gamma )</span> of the presheaf <span
+class="katex-math"
+data-display="inline"
+data-tex="F">F</span> evaluated at <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>.</li>
+
+<li>A morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="f : A \to  B">f : A \to  B</span> lifts to a natural transformation <span
+class="katex-math"
+data-display="inline"
+data-tex="\eta  : F \to  G">\eta  : F \to  G</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="G = \operatorname {Hom}_\mathcal {C}(-, B)">G = \operatorname {Hom}_\mathcal {C}(-, B)</span>, and for any context <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, the component <span
+class="katex-math"
+data-display="inline"
+data-tex="\eta _\Gamma  : F(\Gamma ) \to  G(\Gamma ), x \mapsto  f x">\eta _\Gamma  : F(\Gamma ) \to  G(\Gamma ), x \mapsto  f x</span> maps a generalized element by post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="f">f</span>.</li>
+
+<li>The functoriality of <span
+class="katex-math"
+data-display="inline"
+data-tex="F = \operatorname {Hom}_\mathcal {C}(-, A)">F = \operatorname {Hom}_\mathcal {C}(-, A)</span> at <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  : \Delta  \to  \Gamma ">\sigma  : \Delta  \to  \Gamma </span> is exactly the pre-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma ">\sigma </span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="F\sigma  : F(\Gamma ) \to  F(\Delta ), x \mapsto  x \sigma ">F\sigma  : F(\Gamma ) \to  F(\Delta ), x \mapsto  x \sigma </span>.</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">(The correct type of <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> should be captured by how it factors other generalized elements, i.e., we should consider the set <span
+class="katex-math"
+data-display="inline"
+data-tex="\{x \mid  x \in  u\}">\{x \mid  x \in  u\}</span>. Our story does not teach us how we should think of <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, but I guess it is related to <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/sieve">sieve</a></span>?)</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">By the way, his blog has a clear storyline, notes some possible confusion about notation, and the motivation for the definitions. Nice to learn.</p></div></section><section
+class="block hide-metadata"
+id="id--5b7068-2c-207873-29"><header><h1><span
+class="taxon"></span>A glance at topos in physics </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I knew that topos can somehow handle infinitesimal elements, but to find an application example, I recall how physics uses <span
+class="katex-math"
+data-display="inline"
+data-tex="dx">dx</span> as an actual element; if <span
+class="katex-math"
+data-display="inline"
+data-tex="dx/dt = v">dx/dt = v</span>, we can multiply both sides by <span
+class="katex-math"
+data-display="inline"
+data-tex="dt">dt</span>, so <span
+class="katex-math"
+data-display="inline"
+data-tex="dx = v \, dt">dx = v \, dt</span>. In this direction, I found this video: <span
+class="link external"><a
+href="https://youtu.be/GD20W6vxMI4?si=OmNUwhQrotcvLfjS">"Higher Topos Theory for Physics", talk by Urs Schreiber at Wolfram Winter School on Physics 2024. It talks about some applications of topos in physics</a></span>. I was fascinated by how topoi are widely used in modern physics. It seems it can do differential geometry with infinitesimal elements, curved space as in general relativity, weird logic as in quantum physics, and some fancy gauge theory. Although I don't have any ideas about it yet.</p></div></section><section
+class="block hide-metadata"
+id="id--5b7876-2c-2012843-29"><header><h1><span
+class="taxon"></span>An intrinsic characterization of flat modules </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">In our algebra class, the flat modules are defined using a categorical property: fix a ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> (follow the convention in Atiyah-Macdonald; all rings are commutative with unity <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>), an <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is flat if the covariant functor defined by tensoring with <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> over <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="(M \otimes _A -) : A\text {-Mod} \to  A\text {-Mod}">(M \otimes _A -) : A\text {-Mod} \to  A\text {-Mod}</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="N \mapsto  M \otimes _A N">N \mapsto  M \otimes _A N</span> is an exact functor. In general, I quite like definitions using categorical properties; they feel concise and mysterious, and when you unpack them, they often contain a lot of meaningful information. But in this case, it is too mysterious; I still don't know the intuition behind what a flat module is. Although classical logic is not the reason for this confusion, I am still curious how constructive mathematicians think about flat modules. I ended up finding the word "syzygy" in Chapter VIII, Flat module, of <span
+class="link external"><a
+href="https://arxiv.org/abs/1605.04832">Commutative algebra: Constructive methods. Finite projective modules</a></span>.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id--5b8924-2c-209282-29"><header><h1><span
+class="taxon">Definition. </span>Syzygy </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Given a ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and an <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span>. A tuple <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_1, \dots , a_n, x_1, \dots , x_n)">(a_1, \dots , a_n, x_1, \dots , x_n)</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="a_i \in  A">a_i \in  A</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="x_i \in  M">x_i \in  M</span>, is called a <strong>syzygy</strong> if <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1 + \dots  + a_n x_n = 0">a_1 x_1 + \dots  + a_n x_n = 0</span>. In matrix form, a syzygy is a pair <span
+class="katex-math"
+data-display="inline"
+data-tex="(L, X)">(L, X)</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="L \in  A_{1 \times  n}">L \in  A_{1 \times  n}</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="X \in  M_{n \times  1}">X \in  M_{n \times  1}</span>, such that <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">Syzygy is an interesting name; according to the Cambridge Dictionary, a syzygy is an arrangement in which two or more planets, stars, etc. are in a straight line. It describes an image in a module: fix some elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span>, like planets, and vary the coefficients <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1, \dots , a_n">a_1, \dots , a_n</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>; we see <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1, \dots , a_n x_n">a_1 x_1, \dots , a_n x_n</span> moving around as planets move in a solar system. When the special timing arises, the sum of the moving planets, <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 x_1 + \dots  + a_n x_n">a_1 x_1 + \dots  + a_n x_n</span>, is zero; this is when a syzygy occurs. What a vivid name.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Figuring out why a syzygy occurred can provide insight into the elements of the underlying module. A finite set of elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span> is linearly independent over <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> if, for any syzygy <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span> with <span
+class="katex-math"
+data-display="inline"
+data-tex="X = [x_1, \dots , x_n]">X = [x_1, \dots , x_n]</span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="L = 0">L = 0</span>. It is the most "free" situation: there are no relations among <span
+class="katex-math"
+data-display="inline"
+data-tex="x_1, \dots , x_n">x_1, \dots , x_n</span>. There are three other cases: The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is bad, the module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is bad, and it is explainable from the choice of <span
+class="katex-math"
+data-display="inline"
+data-tex="L">L</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span>. (badness is measured by how far the module is from a vector space)</p><ol
+xmlns:html="http://www.w3.org/1999/xhtml"><li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {2} \cdot  \bar {3} = 0">\bar {2} \cdot  \bar {3} = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> -module. The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {2}">\bar {2}</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> is already a zero divisor, so we can blame the syzygy on the coefficient ring <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span>.</li>
+
+  <li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="2 \cdot  \bar {3} = 0">2 \cdot  \bar {3} = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>-module. The coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="2">2</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span> is good; it is not a zero divisor in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>, but <span
+class="katex-math"
+data-display="inline"
+data-tex="\bar {3}">\bar {3}</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span> has the property that adding it to itself is zero; it is a torsion element. So the cause of this syzygy should be counted on the module <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z} / 6 \mathbb {Z}">\mathbb {Z} / 6 \mathbb {Z}</span>.</li>
+
+  <li>Consider <span
+class="katex-math"
+data-display="inline"
+data-tex="2 \cdot  (1/3) + (-3) \cdot  (1/2) = 0">2 \cdot  (1/3) + (-3) \cdot  (1/2) = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Q}">\mathbb {Q}</span> as a <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>-module. The choice of coefficients <span
+class="katex-math"
+data-display="inline"
+data-tex="L = \begin {bmatrix} 2 &amp; -3 \end {bmatrix}">L = \begin {bmatrix} 2 &amp; -3 \end {bmatrix}</span> naturally has the potential to be canceled in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Z}">\mathbb {Z}</span>: take <span
+class="katex-math"
+data-display="inline"
+data-tex="3, 2 \in  \mathbb {Z}">3, 2 \in  \mathbb {Z}</span>, set <span
+class="katex-math"
+data-display="inline"
+data-tex="G = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal }">G = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal }</span>, then <span
+class="katex-math"
+data-display="inline"
+data-tex="L G = \begin {bmatrix} 2 &amp; -3 \end {bmatrix} {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } = 0">L G = \begin {bmatrix} 2 &amp; -3 \end {bmatrix} {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } = 0</span>. The elements <span
+class="katex-math"
+data-display="inline"
+data-tex="X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal }">X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal }</span> in the module happened to be multiples of <span
+class="katex-math"
+data-display="inline"
+data-tex="G">G</span>: <span
+class="katex-math"
+data-display="inline"
+data-tex="X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal } = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } \begin {bmatrix} 1/6 \end {bmatrix} = G Y">X = {\begin {bmatrix} 1/3 &amp; 1/2 \end {bmatrix}}^{\intercal } = {\begin {bmatrix} 3 &amp; 2 \end {bmatrix}}^{\intercal } \begin {bmatrix} 1/6 \end {bmatrix} = G Y</span> where <span
+class="katex-math"
+data-display="inline"
+data-tex="Y = \begin {bmatrix} 1/6 \end {bmatrix}">Y = \begin {bmatrix} 1/6 \end {bmatrix}</span>. So 
+  
+  <span
+class="katex-math"
+data-display="block"
+data-tex="L X = L G Y = 0 Y = 0.">L X = L G Y = 0 Y = 0.</span> 
+  
+  We cannot blame this syzygy on the module <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathbb {Q}">\mathbb {Q}</span>; these coefficients would naturally be eliminated <span
+class="katex-math"
+data-display="inline"
+data-tex="LG = 0">LG = 0</span> within the ring <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</li></ol><p
+xmlns:html="http://www.w3.org/1999/xhtml">Formalizing this intuition, we say:</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id--5b11700-2c-2012170-29"><header><h1><span
+class="taxon">Definition. </span>Explainable syzygy and Flat module </h1><div
+class="metadata"><ul><li
+class="meta-item">November 13, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">A syzygy <span
+class="katex-math"
+data-display="inline"
+data-tex="LX = 0">LX = 0</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is <strong>explainable</strong> if there exist <span
+class="katex-math"
+data-display="inline"
+data-tex="G \in  A_{n \times  m}">G \in  A_{n \times  m}</span>, <span
+class="katex-math"
+data-display="inline"
+data-tex="Y \in  M_{m \times  1}">Y \in  M_{m \times  1}</span> such that:</p><ul
+xmlns:html="http://www.w3.org/1999/xhtml"><li><span
+class="katex-math"
+data-display="inline"
+data-tex="LG = 0">LG = 0</span> (the coefficient <span
+class="katex-math"
+data-display="inline"
+data-tex="L">L</span> naturally has the potential to be canceled in <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>) and</li>
+
+  <li><span
+class="katex-math"
+data-display="inline"
+data-tex="X = GY">X = GY</span> (the module elements <span
+class="katex-math"
+data-display="inline"
+data-tex="X">X</span> happen to lie in the image of <span
+class="katex-math"
+data-display="inline"
+data-tex="G">G</span>).</li></ul><p
+xmlns:html="http://www.w3.org/1999/xhtml">An <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>-module <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is <strong>flat</strong> if every syzygy in <span
+class="katex-math"
+data-display="inline"
+data-tex="M">M</span> is explainable.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">This definition of a flat module gives an intrinsic description of a flat module, rather than an extrinsic view; <span
+class="katex-math"
+data-display="inline"
+data-tex="M \otimes _A -">M \otimes _A -</span> is an exact functor. The two ways have different advantages. I can’t say which one is the better definition, but I want to emphasize the naming: syzygy and explainable give a strong intuition. I think the name of a generalized element also has the same spirit! (Why a flat module is called flat is still a mystery) This book also has a small poem at the beginning of the chapter on flat modules:</p><blockquote
+xmlns:html="http://www.w3.org/1999/xhtml"><p>Dear elements,</p>
+  <p>If you aren’t free,</p>
+  <p>it isn’t my fault.</p>
+  <p>A flat module.</p></blockquote><p
+xmlns:html="http://www.w3.org/1999/xhtml">I think it is cute!</p></div></section></div></section><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000H-2f"><header><h1><span
+class="taxon"></span>Weeknotes 2026-W44: Where dreams begin <a
+class="slug"
+href="/math-blog/000H">[000H]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 3, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">I wrote a <span
+class="link local"><a
+href="/math-blog/subobject-classifier-obsidian">sketch</a></span> of an introduction to the subobject classifier last Thursday. I was focusing on math and wrote any English that came to mind. It turned out to be filled with 渾然天成的 grammar errors. I have been rewriting the sketch as a polished blog and trying to host it on Github this week. For the choice of the blog tool, I tried <span
+class="link external"><a
+href="https://www.forester-notes.org/index/">Forester</a></span>, a Zettelkasten system for math notes, and <span
+class="link external"><a
+href="https://github.com/kodama-community/kodama">Kodama</a></span>, a variation of Forester that allows Typst. A wise man once said: Stay away from LaTeX and use Typst to make your life better. But I still chose Forester for the bigger community and support (pain).</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">I use the following steps to rewrite my English in the sketch:
+
+<ol><li>Pay attention to the grammar of the sentences and read them aloud. Try my best to fix them.</li>
+
+<li>Use the prompt <code>point out the grammar errors but do not fix it</code> with every section I have rewritten, and get 10+ more grammar errors.
+</li>
+
+<li>Be confused by the vocabulary about English grammar rules. Who knows the English of 被動分詞 is "Passive Participle"?</li>
+
+<li>Repeat the above steps until hours have passed and it's dinner time or the bus is coming and I need to go home. </li></ol>
+
+The <span
+class="link local"><a
+href="/math-blog/0001">result</a></span> (I only had time to rewrite the first two chapters) looks good to me. I may need to tweak my method, otherwise I may not even read any synthetic differential geometry by the end of this semester. One of my friends also vibecoded a <span
+class="link external"><a
+href="https://github.com/justinvulz/tola-forester">Forester-like Typst blog tool</a></span>, and he converted my sketch to <span
+class="link local"><a
+href="/math-blog/subobject-classifier-tola-forester">this</a></span> in just 10 minutes... </p></div></section></div></section><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0001-2f"><header><h1><span
+class="taxon"></span>A gentle introduction to subobject classifiers <a
+class="slug"
+href="/math-blog/0001">[0001]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Subobject classifiers seem to be very important in defining a <em><span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/topos#ElementaryTopos">topos</a></span></em>, although I also don't know what a <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/topos#what_a_topos_is_like">topos</a></span> is. In the process of understanding the definition of subobject classifier, I think I have become more fluent in the language of representable functors, the Yoneda lemma, and natural transformations. </p><p
+xmlns:html="http://www.w3.org/1999/xhtml">This blog post introduces concepts and constructions about subobjects, unpacks the definition of a subobject classifier, and shows how a subobject classifier <em>internalizes</em> them as morphisms. We assume that the reader <em>knows</em> about the definitions of categories, functors, natural transformations, and pullbacks but may not <em>understand</em> them. We will tell the story in a brain-friendly way (I hope).
+</p><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000D-2f"><header><h1><span
+class="taxon"></span>Notation of generalized elements <a
+class="slug"
+href="/math-blog/000D">[000D]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml"> Let <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> be a category. In general, for an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we can not talk about what is an <em>element</em> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. But from the categorical semantics of type theory or in the lens of Yoneda lemma (do not worry if you did not heard about them), it seems to be a great idea to consider <strong>generalized elements</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0002-2f"><header><h1><span
+class="taxon">Definition. </span>Generalized element <a
+class="slug"
+href="/math-blog/0002">[0002]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Let <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> be an object in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. A <strong>generalized element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> is a morphism into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x : \Gamma  \rightarrow  A.">x : \Gamma  \rightarrow  A.</span>
+
+The source <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is called the <strong>context</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span>. In the case <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> has terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>, a generalized element <span
+class="katex-math"
+data-display="inline"
+data-tex="x : 1 \rightarrow  A">x : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> whose context is the terminal object <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span> is called a <strong>global element</strong> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The <mark>notation</mark> of generalized elements makes reasoning about objects like working with "sets." For the reader who knows the Yoneda embedding, <mark>it</mark> can be viewed as a converter sending an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> to its generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> grouped by contexts, where <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Hom}_\mathcal {C}(-, A)">\operatorname {Hom}_\mathcal {C}(-, A)</span> denotes the <span
+class="link local"><a
+href="/math-blog/000C">contravariant hom functor</a></span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. The following exercise gives us more intuition about the generalized element notation:</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We use <span
+class="katex-math"
+data-display="inline"
+data-tex="f g">f g</span> to denote the composition <span
+class="katex-math"
+data-display="inline"
+data-tex="f ∘ g">f ∘ g</span> of morphisms.</p><section
+class="block hide-metadata"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0003-2f"><header><h1><span
+class="taxon">Exercise. </span>Functional extensionality via generalized element <a
+class="slug"
+href="/math-blog/0003">[0003]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="f, g : A \rightarrow  B">f, g : A \rightarrow  B</span> be two morphisms in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. Show that <span
+class="katex-math"
+data-display="inline"
+data-tex="f = g">f = g</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="f x = g x">f x = g x</span> for all <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+
+</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">The use of the word "global" in "global element" comes from the understanding:</p><section
+class="block hide-metadata"
+data-taxon="Proposition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0004-2f"><header><h1><span
+class="taxon">Proposition. </span>Justification of the name of global elements <a
+class="slug"
+href="/math-blog/0004">[0004]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">Fix an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> with a <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">An assignment <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="a_\Gamma  : \Gamma  \rightarrow  A">a_\Gamma  : \Gamma  \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> is called a <strong>global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span></strong> if it is <em>invariant under context substitution</em> in the sense that:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="a_\Delta  \sigma  = a_\Gamma ">a_\Delta  \sigma  = a_\Gamma </span>
+
+for all morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  : \Gamma  \rightarrow  \Delta ">\sigma  : \Gamma  \rightarrow  \Delta </span> in <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Show that there is a one-to-one correspondence between global elements <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and global assignments of generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.
+</p><section
+class="block hide-metadata"
+data-taxon="Proof"
+id="id--5b780-2c-201916-29"><header><h1><span
+class="taxon">Proof. </span> </h1><div
+class="metadata"><ul><li
+class="meta-item">October 30, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+Given a global element <span
+class="katex-math"
+data-display="inline"
+data-tex="c : 1 \rightarrow  A">c : 1 \rightarrow  A</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, we can consider the assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A">c {!}_\Gamma  : \Gamma  \rightarrow  1 \rightarrow  A</span>
+
+for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, where the morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  : \Gamma  \rightarrow  1">{!}_\Gamma  : \Gamma  \rightarrow  1</span> is the unique morphism into the <span
+class="link local"><a
+href="/math-blog/0005">terminal object</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="1">1</span>. Then <span
+class="katex-math"
+data-display="inline"
+data-tex="(c {!}_\Gamma )_\Gamma ">(c {!}_\Gamma )_\Gamma </span> is invariant under context substitution since for any morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma : \Gamma  \rightarrow  \Delta ">\sigma : \Gamma  \rightarrow  \Delta </span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma  = {!}_\Delta  \sigma ">{!}_\Gamma  = {!}_\Delta  \sigma </span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_\Gamma ">{!}_\Gamma </span>, and so <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_\Gamma  = c {!}_\Delta  \sigma ">c {!}_\Gamma  = c {!}_\Delta  \sigma </span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Conversely, let <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> be a global assignment of generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. We have a global element 
+
+<span
+class="katex-math"
+data-display="block"
+data-tex=" a_1 : 1 \rightarrow  A"> a_1 : 1 \rightarrow  A</span>
+
+of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+We check that these two constructions are inverses of each other:
+
+<ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c">c {!}_1 = c</span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1">{!}_1 = \operatorname {id}_1 : 1 \rightarrow  1</span> by the uniqueness of <span
+class="katex-math"
+data-display="inline"
+data-tex="{!}_1">{!}_1</span>, we have <span
+class="katex-math"
+data-display="inline"
+data-tex="c {!}_1 = c \operatorname {id}_1 = c">c {!}_1 = c \operatorname {id}_1 = c</span>.</li>
+
+  <li><span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>: Since <span
+class="katex-math"
+data-display="inline"
+data-tex="(a_\Gamma )_\Gamma ">(a_\Gamma )_\Gamma </span> is "invariant under context substitution", taking <span
+class="katex-math"
+data-display="inline"
+data-tex="\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1">\sigma  := {!}_\Gamma  : \Gamma  \rightarrow  1</span> gives <span
+class="katex-math"
+data-display="inline"
+data-tex="a_1 {!}_\Gamma  = a_\Gamma ">a_1 {!}_\Gamma  = a_\Gamma </span>.</li></ul></p></div></section></div></section></div></section><section
+class="block hide-metadata"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000F-2f"><header><h1><span
+class="taxon"></span>Definition of subobjects <a
+class="slug"
+href="/math-blog/000F">[000F]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">For the generalization of a subset, we should look at a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span>. In the notation of generalized elements, the condition of <span
+class="katex-math"
+data-display="inline"
+data-tex="i : U \hookrightarrow  A">i : U \hookrightarrow  A</span> being a monomorphism is exactly that, for all generalized elements <span
+class="katex-math"
+data-display="inline"
+data-tex="x, y">x, y</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> with the same context, if <span
+class="katex-math"
+data-display="inline"
+data-tex="i x = i y">i x = i y</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x = y">x = y</span>. Notice that <span
+class="katex-math"
+data-display="inline"
+data-tex="i x, i y">i x, i y</span> are generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Therefore, for each object <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma ">\Gamma </span>, the post-composition by <span
+class="katex-math"
+data-display="inline"
+data-tex="i">i</span>:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+">
+\begin {aligned}
+   (i \circ ) : \operatorname {Hom}_\mathcal {C}(\Gamma , U) &amp;\rightarrow  \operatorname {Hom}_\mathcal {C}(\Gamma , A) \\
+   x &amp;\mapsto  i x
+\end {aligned}  
+</span>
+
+can be seen as an inclusion map from generalized elements of <span
+class="katex-math"
+data-display="inline"
+data-tex="U">U</span> to they of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">We can recover the notation of an element lying a subset, the inclusion relation between two subsets, and when two subsets are considered equal.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0007-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject membership relation <a
+class="slug"
+href="/math-blog/0007">[0007]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Let <span
+class="katex-math"
+data-display="inline"
+data-tex="x : \Gamma  \rightarrow  A">x : \Gamma  \rightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A">u : U \hookrightarrow  A</span> be a <span
+class="link local"><a
+href="/math-blog/0006">monomorphism</a></span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>. We say <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> is <mark>lying</mark> in <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, if <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> factors through <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span>; that is, we have
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x = u \phi ">x = u \phi </span>
+
+for some morphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : \Gamma  \rightarrow  U">\phi  : \Gamma  \rightarrow  U</span>. 
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Notice that such a <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi ">\phi </span> is unique: if <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \phi ">x = u \phi </span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="x = u \psi ">x = u \psi </span> for some <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi , \psi  : \Gamma  \rightarrow  U">\phi , \psi  : \Gamma  \rightarrow  U</span>, then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \phi  = u \psi ">u \phi  = u \psi </span>, which implies <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  = \psi ">\phi  = \psi </span> since <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is a monomorphism.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0008-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject inclusion relation <a
+class="slug"
+href="/math-blog/0008">[0008]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+For <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span>, we say <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> is <strong>included</strong> in <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, if
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="x \in  u \text { implies } x \in  v">x \in  u \text { implies } x \in  v</span>
+
+for all <span
+class="link local"><a
+href="/math-blog/0002">generalized elements</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> denotes the <span
+class="link local"><a
+href="/math-blog/0007">subobject membership relation</a></span>.</p></div></section><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f0009-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject equivalence relation <a
+class="slug"
+href="/math-blog/0009">[0009]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+Two <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> into the same object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are considered <strong>equivalent</strong> if <span
+class="katex-math"
+data-display="block"
+data-tex="u \le  v \text { and } v \le  u,">u \le  v \text { and } v \le  u,</span> denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>. Recall that <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> denotes the <span
+class="link local"><a
+href="/math-blog/0008">subobject inclusion relation</a></span>.</p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">After we have the membership relation <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span>, all the other definitions <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v, u \sim  v">u \le  v, u \sim  v</span> mimic the behavior of a subset in set theory.</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">Notably, in the above definition of inclusion <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span>, we hide the sources <span
+class="katex-math"
+data-display="inline"
+data-tex="\Gamma , U, V">\Gamma , U, V</span> of morphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="x, u, v">x, u, v</span> intentionally because they are somehow <mark><em>irrelevant</em></mark> in actual proofs about the properties of: lets us write computations more like we are dealing with sets. In the following exercise, try to avoid explicitly writing the sources of morphisms as much as possible!</p><p
+xmlns:html="http://www.w3.org/1999/xhtml"><mark>We will see some examples of monomorphisms in the next section.</mark> 
+
+First, let us make sure those definitions have the properties we expected and verify they match <span
+class="link external"><a
+href="https://ncatlab.org/nlab/show/subobject#as_classes_of_monomorphisms">the definitions in nLab</a></span>.</p><section
+class="block hide-metadata"
+data-taxon="Exercise"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000A-2f"><header><h1><span
+class="taxon">Exercise. </span>Properties of <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> <a
+class="slug"
+href="/math-blog/000A">[000A]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">October 31, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+For any <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="u,u',v,v',w">u,u',v,v',w</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> and <span
+class="link local"><a
+href="/math-blog/0002">generalized element</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="x">x</span> of <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, show the following:
+<ol><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> factor through <span
+class="katex-math"
+data-display="inline"
+data-tex="v">v</span>.</li>
+<li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u = v \phi ">u = v \phi </span> for some isomorphism <span
+class="katex-math"
+data-display="inline"
+data-tex="\phi  : U \cong  V">\phi  : U \cong  V</span>, where <span
+class="katex-math"
+data-display="inline"
+data-tex="U, V">U, V</span> are the source of <span
+class="katex-math"
+data-display="inline"
+data-tex="u : U \hookrightarrow  A, v : V \hookrightarrow  A">u : U \hookrightarrow  A, v : V \hookrightarrow  A</span> respectively.  </li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\le ">\le </span> defines a preorder on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  u">u \le  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \le  w">v \le  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  w">u \le  w</span>.</li></ul></li>
+<li>The relation <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span> defines a equivalence relation on monomorphisms into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>:
+  <ul><li><span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u">u \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  u">v \sim  u</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  w">v \sim  w</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  w">u \sim  w</span>.</li></ul></li>
+<li>Both relations <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> are well defined with respect to the equivalent relation <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>, that is:
+  <ul><li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u">x \in  u</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="x \in  u'">x \in  u'</span>.</li>
+  <li>If <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  u'">u \sim  u'</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="v \sim  v'">v \sim  v'</span> then <span
+class="katex-math"
+data-display="inline"
+data-tex="u \le  v">u \le  v</span> if and only if <span
+class="katex-math"
+data-display="inline"
+data-tex="u' \le  v'">u' \le  v'</span>.</li></ul></li></ol></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml">We should close this section by giving the definition of the <strong>subobjects</strong> of an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>.</p><section
+class="block hide-metadata"
+data-taxon="Definition"
+id="id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000B-2f"><header><h1><span
+class="taxon">Definition. </span>Subobject <a
+class="slug"
+href="/math-blog/000B">[000B]</a></h1><div
+class="metadata"><ul><li
+class="meta-item">November 2, 2026</li><li
+class="meta-item"><address
+class="author"><span
+class="link local"><a
+href="/math-blog/hsuchingchung">Hsu Ching Chung</a></span></address></li></ul></div></header><div
+class="mainmatter"><p
+xmlns:html="http://www.w3.org/1999/xhtml">
+
+The <strong>subobjects</strong> on an object <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> in a category <span
+class="katex-math"
+data-display="inline"
+data-tex="\mathcal {C}">\mathcal {C}</span> are the equivalence classes of <span
+class="link local"><a
+href="/math-blog/0006">monomorphisms</a></span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span> quotiented by the <span
+class="link local"><a
+href="/math-blog/0009">subobject equivalence relation</a></span> <span
+class="katex-math"
+data-display="inline"
+data-tex="\sim ">\sim </span>, denoted by <span
+class="katex-math"
+data-display="inline"
+data-tex="\operatorname {Sub}(A)">\operatorname {Sub}(A)</span>. In notation:
+
+<span
+class="katex-math"
+data-display="block"
+data-tex="\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.">\operatorname {Sub}(A) := \set { u | u : U \hookrightarrow  V }/{\sim }.</span></p></div></section><p
+xmlns:html="http://www.w3.org/1999/xhtml"><span
+class="link external"><a
+href="https://en.wikipedia.org/wiki/Abuse_of_notation#Equivalence_classes">As an abuse of notation</a></span>,  
+for two monomorphisms <span
+class="katex-math"
+data-display="inline"
+data-tex="u,v">u,v</span> into <span
+class="katex-math"
+data-display="inline"
+data-tex="A">A</span>, instead of writing <span
+class="katex-math"
+data-display="inline"
+data-tex="[u]">[u]</span> for the subobject represented by <span
+class="katex-math"
+data-display="inline"
+data-tex="u">u</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="[u] = [v]">[u] = [v]</span> for <span
+class="katex-math"
+data-display="inline"
+data-tex="u, v">u, v</span> are representing the same subobject, we just write <span
+class="katex-math"
+data-display="inline"
+data-tex="u \in  \operatorname {Sub}(A)">u \in  \operatorname {Sub}(A)</span> and <span
+class="katex-math"
+data-display="inline"
+data-tex="u \sim  v">u \sim  v</span>.
+
+</p><p
+xmlns:html="http://www.w3.org/1999/xhtml">well powered ?</p></div></section></div></section></div></section></div></section></footer></article><nav
+id="toc"><div
+class="block"><h1>Table of Contents</h1><ul
+class="block"><li
+class="numbered"><a
+class="bullet"
+href="/math-blog/000I"
+title="Weeknotes 2026-W45: Topos, generalized objects, and syzygies[000I]">■</a><span
+class="link local"
+data-target="#id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000I-2f"><span
+class="taxon"><span
+class="section-number"></span></span>Weeknotes 2026-W45: Topos, generalized objects, and syzygies</span><ul
+class="block"><li
+class="numbered"><a
+class="bullet"
+title="Some inspiration from Tao's post about topos">■</a><span
+class="link local"
+data-target="#id--5b686-2c-207065-29"><span
+class="taxon"><span
+class="section-number"></span></span>Some inspiration from Tao's post about topos</span><ul
+class="block"><li
+class="numbered"><a
+class="bullet"
+title="A presheaf is a generalized object">■</a><span
+class="link local"
+data-target="#id--5b1166-2c-205156-29"><span
+class="taxon"><span
+class="section-number"></span></span>A presheaf is a generalized object</span></li><li
+class="numbered"><a
+class="bullet"
+title="Some morphisms should have different types?">■</a><span
+class="link local"
+data-target="#id--5b5159-2c-206913-29"><span
+class="taxon"><span
+class="section-number"></span></span>Some morphisms should have different types?</span></li></ul></li><li
+class="numbered"><a
+class="bullet"
+title="A glance at topos in physics">■</a><span
+class="link local"
+data-target="#id--5b7068-2c-207873-29"><span
+class="taxon"><span
+class="section-number"></span></span>A glance at topos in physics</span></li><li
+class="numbered"><a
+class="bullet"
+title="An intrinsic characterization of flat modules">■</a><span
+class="link local"
+data-target="#id--5b7876-2c-2012843-29"><span
+class="taxon"><span
+class="section-number"></span></span>An intrinsic characterization of flat modules</span><ul
+class="block"><li
+class="numbered"><a
+class="bullet"
+title="Syzygy">■</a><span
+class="link local"
+data-target="#id--5b8924-2c-209282-29"><span
+class="taxon">Definition <span
+class="section-number"></span></span>Syzygy</span></li><li
+class="numbered"><a
+class="bullet"
+title="Explainable syzygy and Flat module">■</a><span
+class="link local"
+data-target="#id--5b11700-2c-2012170-29"><span
+class="taxon">Definition <span
+class="section-number"></span></span>Explainable syzygy and Flat module</span></li></ul></li></ul></li><li
+class="numbered"><a
+class="bullet"
+href="/math-blog/000H"
+title="Weeknotes 2026-W44: Where dreams begin[000H]">■</a><span
+class="link local"
+data-target="#id-https-3a-2f-2fdopamine333-2egithub-2eio-2fmath-blog-2f000H-2f"><span
+class="taxon"><span
+class="section-number"></span></span>Weeknotes 2026-W44: Where dreams begin</span></li></ul></div></nav></main></div></body></html>
