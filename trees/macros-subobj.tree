@@ -15,3 +15,4 @@
 \def\HomC{#{\Hom_\CCat}}
 \def\Set{#{\operatorname{Set}}}
 \def\op{#{\mathrm{op}}}
+\def\mark[body]{\<html:mark>{\body}}

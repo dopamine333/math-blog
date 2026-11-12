@@ -4,7 +4,7 @@
 \date{2026-10-30T13:20:46Z}
 \import{macros-subobj}
 
-\p{Let #{A} be an object in a category \CCat. A \strong{generalize element} of #{A} is a morphism into #{A} 
+\p{Let #{A} be an object in a category \CCat. A \strong{generalized element} of #{A} is a morphism into #{A} 
 
 ##{x : \Gamma \r A.}
 

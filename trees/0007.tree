@@ -5,7 +5,7 @@
 \import{macros-subobj}
 
 \p{
-Let #{x : \Gamma \r A} be a [generalized element](0002) of an object #{A} and #{u : U \hook A} be a [monomorphism](0006) in a category \CCat. We say #{x} is \strong{lying} in #{u}, denoted by #{x \in u}, if #{x} factors through #{u}; that is, we have
+Let #{x : \Gamma \r A} be a [generalized element](0002) of an object #{A} and #{u : U \hook A} be a [monomorphism](0006) in a category \CCat. We say #{x} is \mark{lying} in #{u}, denoted by #{x \in u}, if #{x} factors through #{u}; that is, we have
 
 ##{x = u \phi}
 

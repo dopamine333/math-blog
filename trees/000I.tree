@@ -1,0 +1,150 @@
+\date{2026-11-13}
+\title{Weeknotes 2026-W45: Topos, generalized objects, and syzygies}
+\author{hsuchingchung}
+
+\def\CCat{#{\mathcal{C}}}
+\def\Hom{#{\operatorname{Hom}}}
+\def\HomC{#{\Hom_\CCat}}
+\def\Psh{#{\operatorname{Psh}}}
+\def\yo{#{\text{よ}}}
+\def\R{#{\mathbb{R}}}
+\def\Z{#{\mathbb{Z}}}
+\def\Q{#{\mathbb{Q}}}
+
+\def\Z6{#{\Z / 6 \Z}}
+
+\p{This week I continue to seek some applications and examples of topos to argue that topos is a better mathematical framework than set theory. Also, I spent some time seeing how constructive mathematics handles flat modules (classically, they use a lot of the law of excluded middle and Zorn's Lemma; I almost went crazy in the algebra class)}
+
+\subtree{
+\title{Some inspiration from Tao's post about topos}
+
+\p{I found I may think about topos alone too much, close to the state of 思而不學則殆. So I opened my browser, searched for "topos," and found an article by Terence Tao: [Real analysis relative to a finite measure space](https://terrytao.wordpress.com/2014/07/15/real-analysis-relative-to-a-finite-measure-space/). This article uses random variables as an example of a topos. I got some ideas 💡 from it.}
+
+\subtree{
+\title{A presheaf is a generalized object}
+
+\p{I think I know why people like presheaves a lot: we can think of a presheaf as a generalized object.}
+
+\p{Fix a measure space #{(\Omega, \mathcal{B}, m)}. The article considers more general elements in the following order:}
+
+\ol{
+  \li{a deterministic real number #{x \in \R}; it's just a real number.}
+
+  \li{a stochastic real number #{x : \Omega \to \R} is a measurable function from #{\Omega} to #{\R}, also called a random variable. (note #{\R} is equipped with the Borel sigma algebra and Lebesgue measure)}
+
+  \li{a stochastic element of a measurable space #{(X, \mathcal{M})} is a measurable function #{x : \Omega \to X}.}
+
+  \li{a stochastic set is a presheaf on the category of measurable sets #{E \subset \Omega} (with inclusion as a poset) satisfying some gluing condition and an axiom related to null sets.}
+}
+
+\p{When I read items 1 and 2, I feel it does quite match the language of generalized elements. The measurable function #{x : \Omega \to \R} is a morphism into #{\R} in the category of measure spaces. It interprets the context #{\Omega} as "randomness". A deterministic real number #{x \in \R} is a constant function #{\Omega \to \R, \omega \mapsto x}, or a global element #{x : 1 \to \R}, where #{1} is the terminal object in measure space, the singleton measure space. (Although they aren't: a morphism in the category of measure spaces is not just a measurable function, and I'm not even sure there exists a terminal object in the category of measure spaces or not. Defining the category of measure spaces needs more [work](https://ncatlab.org/nlab/show/categories+of+measure+theory#measurable_spaces) then defining the category of measurable spaces.)}
+
+\p{But item 3 shocked me! Replacing the codomain #{\R} with a general measurable space #{X} seems to be a natural step toward general cases. But when I realized it allows the codomain #{X} to not live in the same category as the domain #{\Omega}: a measure space #{\Omega} has the σ-algebra structure #{\mathcal{B}} with a specified measure #{m}, but a measurable space #{X} only requires a σ-algebra structure #{\mathcal{M}}. It goes beyond the framework of generalized elements: it consider a "morphism" between objects in different categories. However, the assignment #{\Omega \mapsto \{\text{measurable functions from } \Omega \text{ to } X\}} is still great enough to form a presheaf! Presheaves seem to be the correct generalization; indeed, item 4 defines stochastic sets as an abstract presheaf rather than measurable functions between some spaces.}
+
+\p{So the evolutionary tree of “elements of #{A}” for an object #{A} in a category \CCat goes like this:}
+\ul{
+
+\li{If #{A} is a "set", it already has the notion of "an element of #{A}".}
+
+\li{If #{A} is not a set, we can consider the generalized elements of #{A}, that is, the morphisms into #{A}, equivalently, the contravariant hom-functor #{\HomC(-, A)}.}
+
+\li{In the spirit of generalized elements, the "social identity" of #{A} is fully described by the “memory” #{\HomC(\Gamma, A)} from other objects #{\Gamma}. If we can implant an artificial memory in each object #{\Gamma}, i.e., assign a set #{F(\Gamma)} to each object #{\Gamma} (of course, satisfying some compatible condition), we can create a virtual object #{F}.}
+}
+
+\p{It is what a presheaf is! We may call a presheaf #{F} a generalized object, for #{F} can only be understood from the point of view of other objects. A fun fact: Denote the Yoneda embedding by #{A \mapsto \yo A := \HomC(-, A)}. In the presheaf category, the set of generalized elements of a generalized object #{F} with the context #{\yo A} is indeed the artificial memory #{F(A)} on #{A}; in other words, #{\Hom_{\Psh(\mathcal{C})}(\yo A, F) \cong F(A)}, exactly the Yoneda Lemma!}
+
+\p{When a presheaf is representable, there exists an object #{A} such that #{F \cong \yo A}. The generalized object #{F} can be realized through a real object #{A}!}
+}
+
+\subtree{
+\title{Some morphisms should have different types?}
+
+\p{It also solves the itch of untyped language. In the [last post](0001), we saw some equations of morphisms in the form:
+
+##{f x \sigma = u \varphi}
+
+where all morphisms have different roles: #{x} is a generalized element, post-composition by #{f} acts like mapping between generalized elements, pre-composition by #{\sigma} acts like context substitution or changing the state of a generalized element, and #{u} is a monomorphism used to test whether a generalized element belongs to the subobject determined by #{u} (the membership relation #{x \in u} is defined as #{x} factors through #{u}, i.e., #{x = u \varphi} for some #{\varphi}).}
+
+\p{Think of the generalized elements of #{A} as a presheaf #{F = \HomC(-, A)}; it separates the role of #{f, x, \sigma} nicely:}
+
+\ul{
+
+\li{Given a context #{\Gamma}, a generalized element with context #{\Gamma} is an element #{x \in F(\Gamma)} of the presheaf #{F} evaluated at #{\Gamma}.}
+
+\li{A morphism #{f : A \to B} lifts to a natural transformation #{\eta : F \to G}, where #{F = \HomC(-, A)}, #{G = \HomC(-, B)}, and for any context #{\Gamma}, the component #{\eta_\Gamma : F(\Gamma) \to G(\Gamma), x \mapsto f x} maps a generalized element by post-composition by #{f}.}
+
+\li{The functoriality of #{F = \HomC(-, A)} at #{\sigma : \Delta \to \Gamma} is exactly the pre-composition by #{\sigma}, #{F\sigma : F(\Gamma) \to F(\Delta), x \mapsto x \sigma}.}
+
+}
+\p{(The correct type of #{u} should be captured by how it factors other generalized elements, i.e., we should consider the set #{\{x \mid x \in u\}}. Our story does not teach us how we should think of #{u}, but I guess it is related to [sieve](https://ncatlab.org/nlab/show/sieve)?)}
+}
+
+\p{By the way, his blog has a clear storyline, notes some possible confusion about notation, and the motivation for the definitions. Nice to learn.}
+}
+
+\subtree{
+\title{A glance at topos in physics}
+
+\p{I knew that topos can somehow handle infinitesimal elements, but to find an application example, I recall how physics uses #{dx} as an actual element; if #{dx/dt = v}, we can multiply both sides by #{dt}, so #{dx = v \, dt}. In this direction, I found this video: ["Higher Topos Theory for Physics", talk by Urs Schreiber at Wolfram Winter School on Physics 2024. It talks about some applications of topos in physics](https://youtu.be/GD20W6vxMI4?si=OmNUwhQrotcvLfjS). I was fascinated by how topoi are widely used in modern physics. It seems it can do differential geometry with infinitesimal elements, curved space as in general relativity, weird logic as in quantum physics, and some fancy gauge theory. Although I don't have any ideas about it yet.}
+}
+
+\subtree{
+\title{An intrinsic characterization of flat modules}
+
+\p{In our algebra class, the flat modules are defined using a categorical property: fix a ring #{A} (follow the convention in Atiyah-Macdonald; all rings are commutative with unity #{1}), an #{A}-module #{M} is flat if the covariant functor defined by tensoring with #{M} over #{A}, #{(M \otimes_A -) : A\text{-Mod} \to A\text{-Mod}}, #{N \mapsto M \otimes_A N} is an exact functor. In general, I quite like definitions using categorical properties; they feel concise and mysterious, and when you unpack them, they often contain a lot of meaningful information. But in this case, it is too mysterious; I still don't know the intuition behind what a flat module is. Although classical logic is not the reason for this confusion, I am still curious how constructive mathematicians think about flat modules. I ended up finding the word "syzygy" in Chapter VIII, Flat module, of [Commutative algebra: Constructive methods. Finite projective modules](https://arxiv.org/abs/1605.04832).}
+
+\subtree{
+\title{Syzygy}
+\taxon{Definition}
+
+\p{Given a ring #{A} and an #{A}-module #{M}. A tuple #{(a_1, \dots, a_n, x_1, \dots, x_n)}, #{a_i \in A}, #{x_i \in M}, is called a \strong{syzygy} if #{a_1 x_1 + \dots + a_n x_n = 0}. In matrix form, a syzygy is a pair #{(L, X)}, where #{L \in A_{1 \times n}} and #{X \in M_{n \times 1}}, such that #{LX = 0}.}
+}
+
+\p{Syzygy is an interesting name; according to the Cambridge Dictionary, a syzygy is an arrangement in which two or more planets, stars, etc. are in a straight line. It describes an image in a module: fix some elements #{x_1, \dots, x_n} in #{M}, like planets, and vary the coefficients #{a_1, \dots, a_n} in #{A}; we see #{a_1 x_1, \dots, a_n x_n} moving around as planets move in a solar system. When the special timing arises, the sum of the moving planets, #{a_1 x_1 + \dots + a_n x_n}, is zero; this is when a syzygy occurs. What a vivid name.}
+
+\p{Figuring out why a syzygy occurred can provide insight into the elements of the underlying module. A finite set of elements #{x_1, \dots, x_n} is linearly independent over #{A} if, for any syzygy #{LX = 0} with #{X = [x_1, \dots, x_n]}, we have #{L = 0}. It is the most "free" situation: there are no relations among #{x_1, \dots, x_n}. There are three other cases: The coefficient #{A} is bad, the module #{M} is bad, and it is explainable from the choice of #{L} and #{X}. (badness is measured by how far the module is from a vector space)}
+
+\def\row[a][b]{#{\begin{bmatrix} \a & \b \end{bmatrix}}}
+\def\col[a][b]{#{{\begin{bmatrix} \a & \b \end{bmatrix}}^{\intercal}}}
+
+\ol{
+  \li{Consider #{\bar{2} \cdot \bar{3} = 0} in \Z6 as a \Z6 -module. The coefficient #{\bar{2}} in \Z6 is already a zero divisor, so we can blame the syzygy on the coefficient ring \Z6.}
+
+  \li{Consider #{2 \cdot \bar{3} = 0} in \Z6 as a #{\Z}-module. The coefficient #{2} in #{\Z} is good; it is not a zero divisor in #{\Z}, but #{\bar{3}} in \Z6 has the property that adding it to itself is zero; it is a torsion element. So the cause of this syzygy should be counted on the module \Z6.}
+
+  \li{Consider #{2 \cdot (1/3) + (-3) \cdot (1/2) = 0} in #{\Q} as a #{\Z}-module. The choice of coefficients #{L = \row{2}{-3}} naturally has the potential to be canceled in #{\Z}: take #{3, 2 \in \Z}, set #{G = \col{3}{2}}, then #{L G = \row{2}{-3} \col{3}{2} = 0}. The elements #{X = \col{1/3}{1/2}} in the module happened to be multiples of #{G}: #{X = \col{1/3}{1/2} = \col{3}{2} \begin{bmatrix} 1/6 \end{bmatrix} = G Y} where #{Y = \begin{bmatrix} 1/6 \end{bmatrix}}. So 
+  
+  ##{L X = L G Y = 0 Y = 0.} 
+  
+  We cannot blame this syzygy on the module #{\Q}; these coefficients would naturally be eliminated #{LG = 0} within the ring #{A}.}
+}
+
+\p{Formalizing this intuition, we say:} 
+
+\subtree{
+\title{Explainable syzygy and Flat module}
+\taxon{Definition}
+
+\p{A syzygy #{LX = 0} in #{M} is \strong{explainable} if there exist #{G \in A_{n \times m}}, #{Y \in M_{m \times 1}} such that:}
+
+\ul{
+  \li{#{LG = 0} (the coefficient #{L} naturally has the potential to be canceled in #{A}) and}
+
+  \li{#{X = GY} (the module elements #{X} happen to lie in the image of #{G}).}
+}
+
+\p{An #{A}-module #{M} is \strong{flat} if every syzygy in #{M} is explainable.}
+
+}
+
+\p{This definition of a flat module gives an intrinsic description of a flat module, rather than an extrinsic view; #{M \otimes_A -} is an exact functor. The two ways have different advantages. I can’t say which one is the better definition, but I want to emphasize the naming: syzygy and explainable give a strong intuition. I think the name of a generalized element also has the same spirit! (Why a flat module is called flat is still a mystery) This book also has a small poem at the beginning of the chapter on flat modules:}
+
+\blockquote{
+  \p{Dear elements,}
+  \p{If you aren’t free,}
+  \p{it isn’t my fault.}
+  \p{A flat module.}
+}
+
+\p{I think it is cute!}
+}
